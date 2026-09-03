@@ -21,7 +21,7 @@ export default function SectionWrapper({
     <section className={clsx(TOP_PADDING, 'w-full', className)}>
       {container ? (
         <Container
-          maxWidth="xl"
+          maxWidth="xxl"
 
           className={clsx('w-full', containerClassName)}
         >
