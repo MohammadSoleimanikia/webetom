@@ -34,6 +34,7 @@ export default function Header() {
               {/* Logo */}
               <div className="flex flex-col items-center justify-center">
                 <Image
+                  preload
                   width={0}
                   height={0}
                   src="/images/logo.svg"
@@ -63,18 +64,19 @@ export default function Header() {
           "bg-white",
         )}
       >
-        <Container className="flex justify-between">
+        <Container maxWidth="xxl" className="flex justify-between">
           {/* burger menu */}
           <NavMobile />
 
           {/* Logo */}
           <div className="flex flex-col items-center justify-center">
             <Image
+              preload
               width={0}
               height={0}
               src="/images/logo.svg"
               alt="Logo"
-              className="w-2/3 object-contain"
+              className="w-3/6 object-contain sm:w-4/6"
             />
 
             <Typography variant="h2" className="mt-2 text-xs">
