@@ -32,11 +32,12 @@ export default function NavMobile() {
         onClose={closeDrawer}
         slotProps={{
           paper: {
-            className: "w-[300px] h-screen",
+            className: "w-[300px] h-screen bg-primary-lighter",
           },
         }}
       >
-        <div className="h-2/6">
+        {/* logo */}
+        <div className="h-auto py-5 bg-white">
           <div className="flex flex-col h-full  items-center justify-center">
             <Image
               width={0}
@@ -51,15 +52,16 @@ export default function NavMobile() {
             </Typography>
           </div>
         </div>
+
         <nav>
-          <List disablePadding className="h-4/6">
+          <List disablePadding >
             {NAV_ITEM.map((item) => (
               <ListItemButton
                 key={item.href}
                 component={Link}
                 href={item.href}
                 onClick={closeDrawer}
-                className=""
+                className="min-h-12"
               >
                 {item.label}
               </ListItemButton>
