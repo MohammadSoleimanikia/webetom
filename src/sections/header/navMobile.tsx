@@ -1,6 +1,12 @@
 "use client";
 
-import { Button, Drawer, List, ListItemButton, Typography } from "@mui/material";
+import {
+  Button,
+  Drawer,
+  List,
+  ListItemButton,
+  Typography,
+} from "@mui/material";
 import Link from "next/link";
 import { useState } from "react";
 import { NAV_ITEM } from "@/context/NAV_ITEMS";
@@ -20,7 +26,7 @@ export default function NavMobile() {
         variant="text"
         type="button"
         onClick={() => setOpen(true)}
-        className="bg-grey-200 rounded-xl"
+        className="m-0 min-w-0 p-0"
       >
         <HiOutlineMenuAlt3 className="size-7 text-gray-700 sm:size-9" />
       </Button>
@@ -37,8 +43,8 @@ export default function NavMobile() {
         }}
       >
         {/* logo */}
-        <div className="h-auto py-5 bg-white">
-          <div className="flex flex-col h-full  items-center justify-center">
+        <div className="h-auto bg-white py-5">
+          <div className="flex h-full flex-col items-center justify-center">
             <Image
               width={0}
               height={0}
@@ -54,7 +60,7 @@ export default function NavMobile() {
         </div>
 
         <nav>
-          <List disablePadding >
+          <List disablePadding>
             {NAV_ITEM.map((item) => (
               <ListItemButton
                 key={item.href}

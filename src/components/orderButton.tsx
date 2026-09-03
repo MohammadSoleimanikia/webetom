@@ -1,4 +1,4 @@
-import { Button, type ButtonProps } from "@mui/material";
+import { Button, Typography, type ButtonProps } from "@mui/material";
 import { IoCartOutline } from "react-icons/io5";
 import clsx from "clsx";
 
@@ -19,19 +19,24 @@ export default function OrderButton({
       variant={isIcon ? "text" : "contained"}
       className={clsx(
         "h-auto",
-        variant === "primary" && "w-36",
-        variant === "secondary" && "w-36 bg-secondary",
-        variant === "icon" && "size-12 min-w-12 p-0 text-primary",
+        variant === "secondary" && "bg-secondary",
+
+        // Icon variant
+        isIcon && ["min-w-0", "size-auto", "p-0", "m-0", "text-primary"],
+
+        // Normal variants
+        !isIcon && "w-36",
+
         className,
       )}
     >
-      <IoCartOutline
-        className={clsx(
-          variant === "icon" && "size-7 sm:size-9",
-        )}
-      />
+      <IoCartOutline className={clsx(isIcon && "size-7 sm:size-9")} />
 
-      {!isIcon && "سفارش سایت"}
+      {!isIcon && (
+        <Typography variant="button" className="text-xs">
+          سفارش سایت
+        </Typography>
+      )}
     </Button>
   );
 }
