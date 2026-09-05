@@ -36,8 +36,14 @@ interface CustomPaletteOptions {
   secondaryOverlayStrong: string;
   border: string;
   surface: string;
+
   green: string;
   lightGreen: string;
+
+  customGreen: string;
+  customPurple: string;
+  customRed: string;
+  customBlue: string;
 }
 
 // ----------------------------------------------------------------------
@@ -159,7 +165,7 @@ const GREY = {
 // GRADIENTS
 
 const GRADIENTS = {
-  primary: createGradient(PRIMARY.light, PRIMARY.main),
+  primary: createGradient(PRIMARY.lighter, "#fff"),
 
   secondary: createGradient(SECONDARY.light, SECONDARY.main),
 
@@ -200,6 +206,11 @@ const CUSTOM = {
 
   green: "#16C79A",
   lightGreen: "#A2E9D7",
+
+  customGreen: "#039747",
+  customPurple: "#722CDB",
+  customRed: "#F53641",
+  customBlue: "#2072D9",
 };
 
 // ----------------------------------------------------------------------
