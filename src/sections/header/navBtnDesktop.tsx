@@ -21,7 +21,7 @@ export default function NavBtnDesktop({ title, link }: Props) {
         isActive && "text-primary border-b-primary rounded-b-none border-b-4",
       )}
     >
-      <Typography variant="button" className="text-nowrap font-extrabold">
+      <Typography variant="button" className="text-nowrap font-bold">
         {title}
       </Typography>
     </Button>

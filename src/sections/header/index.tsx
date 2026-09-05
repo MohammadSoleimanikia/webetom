@@ -52,7 +52,7 @@ export default function Header() {
           {/* Navigation */}
           <div className="flex h-full w-9/12 items-center justify-between pl-10">
             <NavDesktop />
-            <OrderButton className="hidden xl:flex" />
+            <OrderButton className="hidden xl:flex py-2.5" />
           </div>
         </div>
       </header>
