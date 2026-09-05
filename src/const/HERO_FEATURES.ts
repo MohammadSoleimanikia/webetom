@@ -1,15 +1,12 @@
-import type { IconType } from "react-icons";
-export type HeroFeatureItem = {
-  title: string;
-  icon: IconType;
-};
+
 import { PiHandshake } from "react-icons/pi";
 import { CiMobile3 } from "react-icons/ci";
 import { MdOutlinePayment } from "react-icons/md";
 import { TbSeo } from "react-icons/tb";
 import { FaScrewdriverWrench } from "react-icons/fa6";
+import { FeatureItem } from "./FEATURES";
 
-export const HERO_FEATURES: HeroFeatureItem[] = [
+export const HERO_FEATURES: FeatureItem[] = [
   {
     title: "پشتیبانی واقعی ",
     icon: PiHandshake,

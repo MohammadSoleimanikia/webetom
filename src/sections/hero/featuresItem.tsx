@@ -1,8 +1,8 @@
-import { HeroFeatureItem } from "@/const/HERO_FEATURES";
+import { FeatureItem } from "@/const/FEATURES";
 import { Typography } from "@mui/material";
 
 type Props = {
-  item: HeroFeatureItem;
+  item: FeatureItem;
 };
 export default function FeaturesItem({ item }: Props) {
   const Icon = item.icon;
