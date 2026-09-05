@@ -1,8 +1,7 @@
-import type { ReactNode } from 'react';
-import clsx from 'clsx/lite';
-import { Container } from '@mui/material';
-import { TOP_PADDING } from '@/context/LAYOUT';
-
+import type { ReactNode } from "react";
+import clsx from "clsx/lite";
+import { Container } from "@mui/material";
+import { TOP_PADDING } from "@/const/LAYOUT";
 
 type SectionWrapperProps = {
   children: ReactNode;
@@ -18,12 +17,12 @@ export default function SectionWrapper({
   container = true,
 }: SectionWrapperProps) {
   return (
-    <section className={clsx(TOP_PADDING, 'w-full', className)}>
+    <section className={clsx(TOP_PADDING, "w-full", className)}>
       {container ? (
         <Container
           maxWidth="xxl"
 
-          className={clsx('w-full', containerClassName)}
+          className={clsx("w-full", containerClassName)}
         >
           {children}
         </Container>
