@@ -19,7 +19,7 @@ export default function Features() {
       <div
         className={clsx(
           "bg-primary hidden w-full rounded-xl",
-          "items-start justify-between gap-2 px-10 xl:px-20 py-5 sm:flex",
+          "items-start justify-between gap-2 p-2 md:px-5 xl:px-20 py-5 sm:flex",
         )}
       >
         {FEATURES.map((item, index) => (
