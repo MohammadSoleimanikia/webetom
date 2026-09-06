@@ -1,4 +1,4 @@
-import { IoChevronForwardSharp } from "react-icons/io5";
+import { IoChevronBack, IoChevronForwardSharp } from "react-icons/io5";
 import { Button } from "@mui/material";
 import { ComponentProps } from "react";
 import clsx from "clsx";
@@ -10,24 +10,26 @@ export default function CtaButtons({ className, ...props }: Props) {
   return (
     <div
       {...props}
-      className={clsx("w-full items-center justify-around sm:justify-center gap-5", className)}
+      className={clsx(
+        "w-full items-center justify-between gap-5 sm:justify-center",
+        className,
+      )}
     >
       <Button
-        startIcon={<IoCartOutline />}
-        variant="contained"
-        color="primary"
-        className="min-w-32 px-6 py-2.5 text-sm text-nowrap"
-      >
-        سفارش سایت
-      </Button>
-
-      <Button
-        startIcon={<IoChevronForwardSharp />}
+        endIcon={<IoChevronBack />}
         variant="outlined"
         color="primary"
-        className="min-w-32 px-6 py-2.5 text-sm text-nowrap"
+        className="min-w-32 bg-white w-1/2 sm:w-auto px-6 py-2.5 text-sm text-nowrap"
       >
-        مشاهده محصولات
+        مشاهده قالب ها
+      </Button>
+      <Button
+        endIcon={<IoCartOutline />}
+        variant="contained"
+        color="secondary"
+        className="min-w-32 w-1/2 sm:w-auto px-6 py-2.5 text-sm text-nowrap"
+      >
+        سفارش سایت
       </Button>
     </div>
   );

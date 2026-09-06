@@ -17,26 +17,29 @@ export default function OrderButton({
     <Button
       {...props}
       variant={isIcon ? "text" : "contained"}
+      endIcon={
+        !isIcon && (
+          <IoCartOutline className={clsx(isIcon && "size-7 sm:size-9")} />
+        )
+      }
       className={clsx(
         "h-auto",
         variant === "secondary" && "bg-secondary",
 
         // Icon variant
-        isIcon && ["min-w-0", "size-auto", "p-0", "m-0", "text-primary"],
+        isIcon && "text-primary m-0 size-auto min-w-0 p-0",
 
         // Normal variants
-        !isIcon && "w-36",
+        !isIcon && "w-36 text-sm text-nowrap",
 
         className,
       )}
     >
-      <IoCartOutline className={clsx(isIcon && "size-7 sm:size-9")} />
-
-      {!isIcon && (
-        <Typography variant="button" className="text-xs">
-          سفارش سایت
-        </Typography>
+      {isIcon && (
+        <IoCartOutline className={clsx(isIcon && "size-7 sm:size-9")} />
       )}
+
+      {!isIcon && " سفارش سایت"}
     </Button>
   );
 }
