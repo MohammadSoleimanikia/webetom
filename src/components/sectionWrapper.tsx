@@ -8,7 +8,8 @@ type SectionWrapperProps = {
   className?: string;
   containerClassName?: string;
   container?: boolean;
-  title?:string;
+  title?: string;
+  actionButton?: ReactNode;
 };
 
 export default function SectionWrapper({
@@ -16,18 +17,30 @@ export default function SectionWrapper({
   className,
   containerClassName,
   container = true,
-  title=""
+  title = "",
+  actionButton = undefined,
 }: SectionWrapperProps) {
   return (
     <section className={clsx(TOP_PADDING, "w-full", className)}>
-      
-      {title!=="" && <Typography variant="h2" className="text-center mb-2">{title}</Typography>}
       {container ? (
         <Container
           maxWidth="xxl"
 
           className={clsx("w-full", containerClassName)}
         >
+          {title !== "" && (
+            <div className="mb-2 flex flex-col items-center gap-2 sm:relative sm:flex-row sm:justify-center">
+              <Typography variant="h2" className="text-center">
+                {title}
+              </Typography>
+
+              {actionButton && (
+                <div className="w-full text-left sm:absolute sm:left-0 sm:w-auto">
+                  {actionButton}
+                </div>
+              )}
+            </div>
+          )}
           {children}
         </Container>
       ) : (
