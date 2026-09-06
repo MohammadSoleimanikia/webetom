@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import clsx from "clsx/lite";
-import { Container } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import { TOP_PADDING } from "@/const/LAYOUT";
 
 type SectionWrapperProps = {
@@ -8,6 +8,7 @@ type SectionWrapperProps = {
   className?: string;
   containerClassName?: string;
   container?: boolean;
+  title?:string;
 };
 
 export default function SectionWrapper({
@@ -15,9 +16,12 @@ export default function SectionWrapper({
   className,
   containerClassName,
   container = true,
+  title=""
 }: SectionWrapperProps) {
   return (
     <section className={clsx(TOP_PADDING, "w-full", className)}>
+      
+      {title!=="" && <Typography variant="h2" className="text-center mb-2">{title}</Typography>}
       {container ? (
         <Container
           maxWidth="xxl"
