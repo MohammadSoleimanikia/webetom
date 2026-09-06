@@ -11,10 +11,7 @@ export const NAV_ITEM = [
     label: "تعرفه ها",
     href: "/price",
   },
-  {
-    label: "امکانات",
-    href: "/features",
-  },
+  
   {
     label: "نمونه سایت ها ",
     href: "/samples",
