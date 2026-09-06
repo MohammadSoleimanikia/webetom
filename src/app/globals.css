@@ -85,27 +85,29 @@
   --color-grey-600-56: var(--mui-palette-grey-600-56);
   --color-grey-600-80: var(--mui-palette-grey-600-80);
 
-/* =========================================================
+  /* =========================================================
    CUSTOM
 ========================================================= */
 
---color-overlay: var(--mui-palette-custom-overlay);
---color-overlay-strong: var(--mui-palette-custom-overlayStrong);
+  --color-overlay: var(--mui-palette-custom-overlay);
+  --color-overlay-strong: var(--mui-palette-custom-overlayStrong);
 
---color-secondary-overlay: var(--mui-palette-custom-secondaryOverlay);
---color-secondary-overlay-strong: var(--mui-palette-custom-secondaryOverlayStrong);
+  --color-secondary-overlay: var(--mui-palette-custom-secondaryOverlay);
+  --color-secondary-overlay-strong: var(
+    --mui-palette-custom-secondaryOverlayStrong
+  );
 
---color-border: var(--mui-palette-custom-border);
---color-surface: var(--mui-palette-custom-surface);
+  --color-border: var(--mui-palette-custom-border);
+  --color-surface: var(--mui-palette-custom-surface);
 
---color-green: var(--mui-palette-custom-green);
---color-light-green: var(--mui-palette-custom-lightGreen);
+  --color-green: var(--mui-palette-custom-green);
+  --color-light-green: var(--mui-palette-custom-lightGreen);
 
-/* Custom Colors */
---color-custom-green: var(--mui-palette-custom-customGreen);
---color-custom-purple: var(--mui-palette-custom-customPurple);
---color-custom-red: var(--mui-palette-custom-customRed);
---color-custom-blue: var(--mui-palette-custom-customBlue);
+  /* Custom Colors */
+  --color-custom-green: var(--mui-palette-custom-customGreen);
+  --color-custom-purple: var(--mui-palette-custom-customPurple);
+  --color-custom-red: var(--mui-palette-custom-customRed);
+  --color-custom-blue: var(--mui-palette-custom-customBlue);
 
   /* =========================================================
      BACKGROUND
@@ -166,4 +168,16 @@
   --background-image-gradient-error: var(--mui-palette-gradients-error);
 
   --background-image-gradient-widget: var(--mui-palette-gradients-widget);
+
+  /* =========================================================
+     SHADOWS
+  ========================================================= */
+
+  --shadow-card: var(--mui-shadows-1);
+  --shadow-card-small: var(--mui-shadows-2);
+
+  /* =========================================================
+     BREAK POINT add later
+  ========================================================= */
+
 }

@@ -12,7 +12,7 @@ export default function FeatureItemMobile({ item }: Props) {
       <div
         className={clsx(
           "flex items-center justify-center p-4 rounded-xl ",
-          "shadow-[0px_0px_20px_1px_#00000024]"
+          "shadow-card-small"
         )}
       >
         <Icon className={`size-6 ${item.color}`} />

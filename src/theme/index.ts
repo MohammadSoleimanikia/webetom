@@ -3,6 +3,7 @@ import { components } from "./overrides";
 import { palette } from "./palette";
 import typography from "@/theme/typography";
 import BreakPoints from "./breakpoints";
+import {shadows} from "./shadow"
 export const theme = createTheme({
   direction: "rtl",
   cssVariables: true,
@@ -13,4 +14,5 @@ export const theme = createTheme({
   breakpoints: {
     values: BreakPoints,
   },
+  shadows:shadows,
 });

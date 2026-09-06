@@ -1,17 +1,17 @@
-import '@mui/material/styles';
+import "@mui/material/styles";
 
 const BreakPoints = {
   xs: 0,
-  sm: 576,
+  sm: 640,
   md: 768,
-  lg: 992,
-  xl: 1200,
-  xxl: 1500,
+  lg: 1024,
+  xl: 1280,
+  xxl: 1536,
 } as const;
 
 export default BreakPoints;
 
-declare module '@mui/material/styles' {
+declare module "@mui/material/styles" {
   interface BreakpointOverrides {
     xs: true;
     sm: true;
