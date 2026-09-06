@@ -1,4 +1,4 @@
-import { FeatureItem } from "@/const/FEATURES";
+import type { FeatureItem } from "@/const/FEATURES";
 import { Typography } from "@mui/material";
 
 type Props = {
@@ -9,7 +9,7 @@ export default function FeaturesItem({ item }: Props) {
   return (
     <div className="flex flex-col items-center justify-center gap-3">
       <Icon className="text-primary size-6" />
-      <Typography variant="body1">{item.title}</Typography>
+      <Typography variant="body1" className="text-center text-nowrap">{item.title}</Typography>
     </div>
   );
 }
