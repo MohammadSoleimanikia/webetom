@@ -58,7 +58,7 @@ export default function HeroSection() {
               )}
             >
               --نصب و راه اندازی در{" "}
-              <span className="text-primary">کمتر از</span> 24 ساعت--
+              کمتر از<span className="text-secondary"> 24 </span>  ساعت--
             </Typography>
           </div>
           {/* CTA buttons */}
