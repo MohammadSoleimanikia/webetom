@@ -10,8 +10,8 @@ export default function HeroFeatures() {
         "hidden flex-wrap justify-around gap-2 xl:gap-5 lg:flex",
       )}
     >
-      {HERO_FEATURES.map((item) => (
-        <FeaturesItem key={item.title} item={item} />
+      {HERO_FEATURES.map((item,index) => (
+        <FeaturesItem key={index} item={item} />
       ))}
     </div>
   );
