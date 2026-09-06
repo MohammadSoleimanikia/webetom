@@ -1,9 +1,15 @@
 import { HERO_FEATURES } from "@/const/HERO_FEATURES";
 import FeaturesItem from "./featuresItem";
+import clsx from "clsx";
 
 export default function HeroFeatures() {
   return (
-    <div className="hidden h-20 w-full py-2 px-4 justify-between rounded-full bg-white lg:flex">
+    <div
+      className={clsx(
+        "h-auto w-full rounded-full bg-white px-4 py-2 shadow-xs",
+        "hidden flex-wrap justify-around gap-2 xl:gap-5 lg:flex",
+      )}
+    >
       {HERO_FEATURES.map((item) => (
         <FeaturesItem key={item.title} item={item} />
       ))}
