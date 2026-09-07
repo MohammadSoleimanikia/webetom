@@ -12,15 +12,15 @@ export default function HeroSection() {
         <div className="relative w-1/2">
           <Image
             preload
-            src="/images/character.webp"
-            alt="character"
+            src="/images/hero/character.webp"
+            alt="character in hero section"
             fill
             className="mask-[linear-gradient(to_bottom,black_90%,transparent_100%)] hidden object-contain object-bottom-right sm:block"
           />
           <Image
             preload
-            src="/images/character-mobile.webp"
-            alt="character"
+            src="/images/hero/character-mobile.webp"
+            alt="character in hero section"
             fill
 
             className="mask-[linear-gradient(to_bottom,black_90%,transparent_100%)] object-contain object-bottom-right sm:hidden"

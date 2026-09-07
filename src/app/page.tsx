@@ -8,8 +8,15 @@ export default function Home() {
   return (
     <>
       {/* hero section ############################# */}
-      <SectionWrapper className="bg-gradient-primary">
-        <HeroSection />
+      <SectionWrapper className="relative overflow-hidden">
+        {/* hero bg */}
+        <div className="absolute inset-0 bg-[url('/images/hero/hero.webp')] bg-cover bg-center bg-no-repeat" />
+        {/* fade mask bottom of hero */}
+        <div className="absolute inset-x-0 bottom-0 z-1 h-40 bg-linear-to-t from-white via-white/50 to-transparent" />
+
+        <div className="relative z-10">
+          <HeroSection />
+        </div>
       </SectionWrapper>
 
       {/*features section  */}
