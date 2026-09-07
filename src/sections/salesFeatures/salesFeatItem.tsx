@@ -27,11 +27,11 @@ export default function SalesFeatItem({ item }: Props) {
       {/* content */}
       <div className={clsx("flex flex-col items-center", "sm:items-start")}>
         {/* title */}
-        <Typography variant="body2" className="font-semibold text-center sm:text-right">
+        <Typography variant="body2" className="font-semibold md:text-base text-center sm:text-right">
           {item.title}
         </Typography>
         {item.description && (
-          <Typography variant="caption" className="font-medium text-center sm:text-right">
+          <Typography variant="caption" className="font-medium md:text-sm text-center sm:text-right">
             {item.description}
           </Typography>
         )}
