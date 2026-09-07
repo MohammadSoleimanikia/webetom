@@ -51,7 +51,7 @@ export default function TemplateSection() {
               <TemplateCard item={item} />
             </SwiperSlide>
           ))}
-          <div className="swiper-pagination template-pagination absolute right-0 bottom-4 left-0 flex justify-center gap-2" />
+          <div className="swiper-pagination template-pagination absolute right-0 bottom-1 left-0 flex justify-center gap-2" />
         </Swiper>
       )}
       <NavBtn side="next" />
