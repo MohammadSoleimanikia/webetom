@@ -31,7 +31,7 @@ export default function TemplateSection() {
           slidesPerView="auto"
           spaceBetween={24}
           grabCursor
-          className="px-2 pb-8!"
+          className="px-2 py-8!"
           navigation={{
             nextEl: ".template-next",
             prevEl: ".template-prev",
@@ -51,7 +51,7 @@ export default function TemplateSection() {
               <TemplateCard item={item} />
             </SwiperSlide>
           ))}
-          <div className="swiper-pagination template-pagination absolute right-0 bottom-0 left-0 flex justify-center gap-2" />
+          <div className="swiper-pagination template-pagination absolute right-0 bottom-3 left-0 flex justify-center gap-2" />
         </Swiper>
       )}
       <NavBtn side="next" />
