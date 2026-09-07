@@ -175,6 +175,7 @@
 
   --shadow-card: var(--mui-shadows-1);
   --shadow-card-small: var(--mui-shadows-2);
+  --shadow-card-extra-small: var(--mui-shadows-3);
 
   /* =========================================================
      BREAK POINT add later
