@@ -1,4 +1,5 @@
 import SectionWrapper from "@/components/sectionWrapper";
+import OnlineStoreSection from "@/sections/onlineStore";
 import Features from "@/sections/features";
 import HeroSection from "@/sections/hero";
 import SalesFeatures from "@/sections/salesFeatures";
@@ -27,7 +28,7 @@ export default function Home() {
 
       {/* templates Slider section */}
       <SectionWrapper
-      containerClassName="bg-background pt-3 xl:rounded-xl"
+        containerClassName="bg-background py-2 md:py-7"
         actionButton={
           <Button variant="text" className="text-sm">
             مشاهده همه
@@ -38,8 +39,14 @@ export default function Home() {
         <TemplateSection />
       </SectionWrapper>
 
-      <SectionWrapper containerClassName=" " title="امکاناتی که فروش شما را بیشتر می کند">
+      {/* sales feature section */}
+      <SectionWrapper title="امکاناتی که فروش شما را بیشتر می کند">
         <SalesFeatures />
+      </SectionWrapper>
+
+      {/*  Online Store Section */}
+      <SectionWrapper containerClassName="bg-primary pt-3 ">
+        <OnlineStoreSection />
       </SectionWrapper>
     </>
   );
