@@ -26,7 +26,7 @@ export default function SectionWrapper({
         <Container
           maxWidth="xxl"
 
-          className={clsx("w-full", containerClassName)}
+          className={clsx("w-full 2xl:rounded-xl", containerClassName)}
         >
           {title !== "" && (
             <div className="mb-3 md:mb-5 flex flex-col items-center gap-2 sm:relative sm:flex-row sm:justify-center">
