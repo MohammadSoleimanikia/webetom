@@ -32,7 +32,7 @@ export default function Header() {
                 className="h-10 w-auto object-contain xl:h-14"
               />
 
-              <Typography variant="h2" className="mt-2 text-base xl:text-xl">
+              <Typography variant="h1" className="mt-2 text-base xl:text-xl">
                 سایت فروشگاهی آماده
               </Typography>
             </div>
