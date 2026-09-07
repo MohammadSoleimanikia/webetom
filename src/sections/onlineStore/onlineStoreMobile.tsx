@@ -8,7 +8,7 @@ type Props = {
 
 export default function OnlineStoreMobile({ data }: Props) {
   return (
-    <div className="relative flex min-h-110 flex-col sm:hidden">
+    <div className="relative flex min-h-110 flex-col md:hidden">
       {/* content */}
       <div className="flex flex-1">
         {/* right section */}
@@ -34,6 +34,13 @@ export default function OnlineStoreMobile({ data }: Props) {
               );
             })}
           </div>
+          <Button
+            color="secondary"
+            className="mt-auto hidden sm:flex"
+            endIcon={<FiPhone />}
+          >
+            از مشاوره رایگان استفاده کنید
+          </Button>
         </div>
 
         {/* left image */}
@@ -48,7 +55,7 @@ export default function OnlineStoreMobile({ data }: Props) {
       </div>
 
       {/* CTA */}
-      <Button color="secondary" endIcon={<FiPhone />}>
+      <Button color="secondary" className="sm:hidden" endIcon={<FiPhone />}>
         از مشاوره رایگان استفاده کنید
       </Button>
     </div>

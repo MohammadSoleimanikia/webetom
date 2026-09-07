@@ -45,7 +45,7 @@ export default function Home() {
       </SectionWrapper>
 
       {/*  Online Store Section */}
-      <SectionWrapper containerClassName="bg-primary pt-3 ">
+      <SectionWrapper containerClassName="bg-primary md:bg-transparent pt-3 ">
         <OnlineStoreSection />
       </SectionWrapper>
     </>
