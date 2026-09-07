@@ -29,7 +29,7 @@ export default function SectionWrapper({
           className={clsx("w-full", containerClassName)}
         >
           {title !== "" && (
-            <div className="mb-2 flex flex-col items-center gap-2 sm:relative sm:flex-row sm:justify-center">
+            <div className="mb-3 md:mb-5 flex flex-col items-center gap-2 sm:relative sm:flex-row sm:justify-center">
               <Typography variant="h2" className="text-center">
                 {title}
               </Typography>
