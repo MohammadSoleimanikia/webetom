@@ -1,6 +1,7 @@
 import SectionWrapper from "@/components/sectionWrapper";
 import Features from "@/sections/features";
 import HeroSection from "@/sections/hero";
+import SalesFeatures from "@/sections/salesFeatures";
 import TemplateSection from "@/sections/templates";
 import { Button } from "@mui/material";
 
@@ -26,6 +27,7 @@ export default function Home() {
 
       {/* templates Slider section */}
       <SectionWrapper
+      containerClassName="bg-background pt-3 xl:rounded-xl"
         actionButton={
           <Button variant="text" className="text-sm">
             مشاهده همه
@@ -34,6 +36,10 @@ export default function Home() {
         title="قالب های آماده برای هر کسب و کار"
       >
         <TemplateSection />
+      </SectionWrapper>
+
+      <SectionWrapper containerClassName=" " title="امکاناتی که فروش شما را بیشتر می کند">
+        <SalesFeatures />
       </SectionWrapper>
     </>
   );
