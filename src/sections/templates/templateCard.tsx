@@ -11,7 +11,7 @@ type Props = {
 export default function TemplateCard({ item }: Props) {
   const Icon = item.icon;
   return (
-    <div className="shadow-card-small flex min-h-60 w-full flex-col rounded-xl p-2">
+    <div className="shadow-card-small bg-white flex min-h-60 w-full flex-col rounded-xl p-2">
       {/* image section */}
       <div className="relative h-40 w-full overflow-hidden rounded-xl">
         <Image
