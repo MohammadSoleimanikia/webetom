@@ -15,49 +15,49 @@ export type TemplateType={
 export const TEMPLATES_DATA:TemplateType[]=[
   {
     title:"سوپر مارکت",
-    imageSrc:'/images/webCard.png',
+    imageSrc:'/images/webCard.webp',
     link:"/",
     color:'text-primary',
     icon:MdOutlineLocalGroceryStore
   },
   {
     title:"آرایشی بهداشتی",
-    imageSrc:'/images/webCard.png',
+    imageSrc:'/images/webCard.webp',
     link:"/",
     color:'text-secondary',
     icon:IoBrushOutline
   },
   {
     title:"کیف و کفش",
-    imageSrc:'/images/webCard.png',
+    imageSrc:'/images/webCard.webp',
     link:"/",
     color:'text-custom-purple',
     icon:GiRunningShoe
   },
   {
     title:"عطر وادکلن",
-    imageSrc:'/images/webCard.png',
+    imageSrc:'/images/webCard.webp',
     link:"/",
     color:'text-custom-green',
     icon:TbPerfume
   },
   {
     title:"موبایل و دیجیتال",
-    imageSrc:'/images/webCard.png',
+    imageSrc:'/images/webCard.webp',
     link:"/",
     color:'text-custom-blue',
     icon:CiMobile3
   },
   {
     title:"زیبایی و آرایشی",
-    imageSrc:'/images/webCard.png',
+    imageSrc:'/images/webCard.webp',
     link:"/",
     color:'text-custom-red',
     icon:RiShoppingBagLine
   },
   {
     title:" آرایشی",
-    imageSrc:'/images/webCard.png',
+    imageSrc:'/images/webCard.webp',
     link:"/",
     color:'text-secondary',
     icon:RiShoppingBagLine
