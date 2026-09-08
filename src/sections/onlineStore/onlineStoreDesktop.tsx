@@ -25,11 +25,11 @@ export default function OnlineStoreDesktop({ data }: Props) {
         )}
       >
         {/* header */}
-        <div className="space-y-5">
-          <Typography variant="h2" className="text-4xl">
+        <div className="space-y-3">
+          <Typography variant="h2" >
             {data.title}
           </Typography>
-          <Typography variant="body1" className="text-base">
+          <Typography variant="body1" className="text-lg" >
             {data.description}
           </Typography>
         </div>
@@ -40,9 +40,12 @@ export default function OnlineStoreDesktop({ data }: Props) {
             const Icon = item.icon;
             return (
               <React.Fragment key={index}>
-                <div className="flex w-full gap-2 flex-col items-center ">
+                <div className="flex w-full flex-col items-center gap-2">
                   <Icon className="size-12 stroke-1 lg:size-14" />
-                  <Typography variant="body1" className="text-sm lg:text-base px-2 text-center">
+                  <Typography
+                    variant="body1"
+                    className="px-2 text-center text-sm lg:text-base"
+                  >
                     {item.title}
                   </Typography>
                 </div>
