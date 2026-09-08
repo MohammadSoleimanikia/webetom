@@ -5,6 +5,7 @@ import HeroSection from "@/sections/hero";
 import SalesFeatures from "@/sections/salesFeatures";
 import TemplateSection from "@/sections/templates";
 import { Button } from "@mui/material";
+import WhyUs from "@/sections/whyUs";
 
 export default function Home() {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
 
       {/* templates Slider section */}
       <SectionWrapper
-        containerClassName="bg-background py-2 md:py-7"
+        containerClassName=" py-2 md:py-7"
         actionButton={
           <Button variant="text" className="text-sm">
             مشاهده همه
@@ -40,13 +41,23 @@ export default function Home() {
       </SectionWrapper>
 
       {/* sales feature section */}
-      <SectionWrapper title="امکاناتی که فروش شما را بیشتر می کند">
+      <SectionWrapper
+        containerClassName="pt-3"
+        title="امکاناتی که فروش شما را بیشتر می کند"
+      >
         <SalesFeatures />
       </SectionWrapper>
 
       {/*  Online Store Section */}
       <SectionWrapper containerClassName="bg-primary md:bg-transparent pt-3 ">
         <OnlineStoreSection />
+      </SectionWrapper>
+
+      {/* why us section  */}
+      <SectionWrapper
+        className="bg-background md:bg-transparent"
+      >
+        <WhyUs />
       </SectionWrapper>
     </>
   );
