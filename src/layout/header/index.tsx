@@ -14,59 +14,70 @@ export default function Header() {
     // desktop---------------------------------------------------------------------------
 
     <>
-      <header
-        className={clsx(
-          "sticky top-0 z-20 hidden h-20 w-full bg-white lg:block 2xl:h-28",
-          isScrolled && "shadow-md",
-        )}
-      >
-        {/* Logo shape */}
-        <div className="absolute top-0 right-0 z-30 h-full w-[33.333%]">
-          <div
-            className={clsx(
-              "absolute top-0 right-0 transition-all duration-500",
-              "h-[calc(100%+30px)] w-full",
-              isScrolled && "h-full",
-              "rounded-bl-[100px] bg-white xl:rounded-bl-full",
-            )}
-          />
+    <header
+  className={clsx(
+    "sticky top-0 z-20 hidden w-full bg-white transition-all duration-500 lg:block",
+    !isScrolled ? "h-20 2xl:h-28" : "h-16 2xl:h-20",
+    isScrolled && "shadow-md",
+  )}
+>
+  {/* Logo shape */}
+  <div className="absolute top-0 right-0 z-30 h-full w-[33.333%]">
+    <div
+      className={clsx(
+        "absolute top-0 right-0 w-full bg-white transition-all duration-500",
+        !isScrolled
+          ? "h-[calc(100%+30px)] rounded-bl-[100px] xl:rounded-bl-full"
+          : "h-full rounded-bl-[60px] xl:rounded-bl-full",
+      )}
+    />
 
-          {/* Logo content */}
-          <div
-            className={clsx(
-              "relative z-10 flex h-[calc(100%+30px)] transition-all duration-500",
-              isScrolled && "h-full",
-              "w-full flex-col items-center justify-center",
-            )}
-          >
-            <div className="flex flex-col items-center justify-center">
-              <Image
-                preload
-                width={0}
-                height={0}
-                src="/images/logo.svg"
-                alt="Logo"
-                className="h-10 w-auto object-contain xl:h-14"
-              />
+    {/* Logo content */}
+    <div
+      className={clsx(
+        "relative z-10 flex w-full flex-col items-center justify-center transition-all duration-500",
+        !isScrolled ? "h-[calc(100%+30px)]" : "h-full",
+      )}
+    >
+      <div className="flex flex-col items-center justify-center">
+        <Image
+          preload
+          width={0}
+          height={0}
+          src="/images/logo.svg"
+          alt="Logo"
+          className={clsx(
+            "w-auto object-contain transition-all duration-500",
+            !isScrolled ? "h-10 xl:h-14" : "h-7 xl:h-9",
+          )}
+        />
 
-              <Typography variant="h1" className="mt-2 text-base xl:text-xl">
-                سایت فروشگاهی آماده
-              </Typography>
-            </div>
-          </div>
-        </div>
-
-        {/* left side*/}
-        <Container
-          maxWidth="xxl"
-          className="relative z-20 flex h-full items-center justify-between"
+        <Typography
+          variant="h1"
+          className={clsx(
+            "transition-all duration-500",
+            !isScrolled
+              ? "mt-2 text-base xl:text-xl"
+              : "mt-1 text-xs xl:text-sm",
+          )}
         >
-          <div className="mr-[33.333%] flex h-full w-full items-center justify-between">
-            <NavDesktop />
-            <OrderButton className="hidden py-2.5 xl:flex" />
-          </div>
-        </Container>
-      </header>
+          سایت فروشگاهی آماده
+        </Typography>
+      </div>
+    </div>
+  </div>
+
+  {/* left side */}
+  <Container
+    maxWidth="xxl"
+    className="relative z-20 flex h-full items-center justify-between"
+  >
+    <div className="mr-[33.333%] flex h-full w-full items-center justify-between">
+      <NavDesktop />
+      <OrderButton className="hidden py-2.5 xl:flex" />
+    </div>
+  </Container>
+</header>
 
       {/* mobile------------------------------------------------------------- */}
       <header
