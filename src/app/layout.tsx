@@ -3,8 +3,8 @@ import "./globals.css";
 
 import { Yekan_Bakh } from "@/assets/fonts";
 import Providers from "@/poviders";
-import Header from "@/sections/header";
-import Footer from "@/sections/footer";
+import Header from "@/layout/header";
+import Footer from "@/layout/footer";
 
 export const metadata: Metadata = {
   title: "سایتوم",

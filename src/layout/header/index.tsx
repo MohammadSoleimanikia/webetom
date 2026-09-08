@@ -1,27 +1,44 @@
-import NavDesktop from "@/sections/header/navDesktop";
-import { Container, Typography } from "@mui/material";
+"use client";
+import { Container, Typography, useScrollTrigger } from "@mui/material";
 import clsx from "clsx/lite";
 import OrderButton from "../../components/orderButton";
 import NavMobile from "./navMobile";
 import Image from "next/image";
+import NavDesktop from "./navDesktop";
 export default function Header() {
+  const isScrolled = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 80,
+  });
   return (
     // desktop---------------------------------------------------------------------------
 
     <>
-      <header className="relative z-20 hidden h-20 w-full bg-white lg:block 2xl:h-28">
+      <header
+        className={clsx(
+          "sticky top-0 z-20 hidden h-20 w-full bg-white lg:block 2xl:h-28",
+          isScrolled && "shadow-md",
+        )}
+      >
         {/* Logo shape */}
         <div className="absolute top-0 right-0 z-30 h-full w-[33.333%]">
           <div
             className={clsx(
-              "absolute top-0 right-0",
+              "absolute top-0 right-0 transition-all duration-500",
               "h-[calc(100%+30px)] w-full",
+              isScrolled && "h-full",
               "rounded-bl-[100px] bg-white xl:rounded-bl-full",
             )}
           />
 
           {/* Logo content */}
-          <div className="relative z-10 flex h-[calc(100%+30px)] w-full flex-col items-center justify-center">
+          <div
+            className={clsx(
+              "relative z-10 flex h-[calc(100%+30px)] transition-all duration-500",
+              isScrolled && "h-full",
+              "w-full flex-col items-center justify-center",
+            )}
+          >
             <div className="flex flex-col items-center justify-center">
               <Image
                 preload
@@ -42,9 +59,9 @@ export default function Header() {
         {/* left side*/}
         <Container
           maxWidth="xxl"
-          className="relative  z-20  flex h-full items-center justify-between"
+          className="relative z-20 flex h-full items-center justify-between"
         >
-          <div className="mr-[33.333%] flex h-full w-full items-center justify-between ">
+          <div className="mr-[33.333%] flex h-full w-full items-center justify-between">
             <NavDesktop />
             <OrderButton className="hidden py-2.5 xl:flex" />
           </div>
@@ -54,32 +71,40 @@ export default function Header() {
       {/* mobile------------------------------------------------------------- */}
       <header
         className={clsx(
-          "relative z-20 flex h-20 w-full items-center lg:hidden",
-          "bg-white",
+          "sticky top-0 z-50 flex w-full items-center bg-white transition-all duration-500 lg:hidden",
+          isScrolled ? "h-14 shadow-md" : "h-20",
         )}
       >
-        <Container maxWidth="xxl" className="flex justify-between">
-          {/* burger menu */}
+        <Container
+          maxWidth="xxl"
+          className="flex h-full items-center justify-between"
+        >
+
+          {/* burger */}
           <NavMobile />
 
+
           {/* Logo */}
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex h-full items-center justify-center">
             <Image
               preload
               width={0}
               height={0}
               src="/images/logo.svg"
               alt="Logo"
-              className="w-3/6 object-contain sm:w-4/6"
+              className={clsx(
+                "w-auto object-contain transition-all duration-500",
+                isScrolled
+                  ? "h-7"
+                  : "h-12",
+              )}
             />
-
-            <Typography variant="h2" className="mt-2 text-xs">
-              سایت فروشگاهی آماده
-            </Typography>
           </div>
 
-          {/* order Button */}
+
+          {/* order */}
           <OrderButton variant="icon" />
+
         </Container>
       </header>
     </>
