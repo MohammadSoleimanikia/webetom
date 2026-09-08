@@ -10,6 +10,7 @@ export type OnlineStoreType = {
   description: string;
   imageSrcMobile: string;
   imageSrcDesktop: string;
+  imageSrcDesktopBg: string;
   link: string;
   items: FeatureItem[];
 };
@@ -20,9 +21,10 @@ export const ONLINE_STORE: OnlineStoreType = {
     </>
   ),
   description:
-    "با سایت فروشگاهی آماده سایتوم، فروشگاهت رو 24 ساعته کن و فروش تو چند برابر کن!",
-  imageSrcMobile: "/images/onlineStoreCharacter.webp",
-  imageSrcDesktop: "/images/onlineStoreCharacterDesktop.webp",
+    "با سایت فروشگاهی آماده سایتوم، محصولاتت رو به هزاران مشتری جدید نمایش بدهه و فروش خودت رو چند برابر کن!",
+  imageSrcMobile: "/images/onlineStore/onlineStoreCharacter.webp",
+  imageSrcDesktop: "/images/onlineStore/onlineStoreCharacterDesktop.webp",
+  imageSrcDesktopBg:"/images/onlineStore/onlineStoreCharacterDesktopBg.webp",
   link: "/",
   items: [
     { title: "اعتماد بیشتر مشتریان", icon: TbShieldCheck },
