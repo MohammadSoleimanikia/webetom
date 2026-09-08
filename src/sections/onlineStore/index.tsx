@@ -7,7 +7,7 @@ export default function OnlineStoreSection() {
   return (
     <>
       <OnlineStoreMobile data={ONLINE_STORE}/>
-      
+      <OnlineStoreDesktop data={ONLINE_STORE}/>
     </>
   );
 }
