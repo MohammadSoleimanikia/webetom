@@ -8,7 +8,7 @@ type Props = {
 
 export default function OnlineStoreMobile({ data }: Props) {
   return (
-    <div className="relative flex min-h-110 flex-col md:hidden">
+    <div className="relative flex min-h-110 flex-col md:hidden pb-5">
       {/* content */}
       <div className="flex flex-1">
         {/* right section */}
