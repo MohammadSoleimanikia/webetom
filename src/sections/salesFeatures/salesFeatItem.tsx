@@ -11,7 +11,7 @@ export default function SalesFeatItem({ item }: Props) {
     <div
       className={clsx(
         "sm:shadow-card-small flex flex-col items-center justify-center gap-2 rounded-xl p-2",
-        "sm:flex-row sm:justify-start sm:gap-5 sm:p-4",
+        "flex-row justify-start sm:gap-5 sm:p-4",
       )}
     >
       {/* icon */}
@@ -25,13 +25,23 @@ export default function SalesFeatItem({ item }: Props) {
       </div>
 
       {/* content */}
-      <div className={clsx("flex flex-col items-center", "sm:items-start sm:space-y-1")}>
+      <div
+        className={clsx(
+          "flex flex-col items-start space-y-1",
+        )}
+      >
         {/* title */}
-        <Typography variant="body2" className="font-semibold md:text-base text-center sm:text-right">
+        <Typography
+          variant="body2"
+          className="font-semibold text-right md:text-base"
+        >
           {item.title}
         </Typography>
         {item.description && (
-          <Typography variant="caption" className="font-medium md:text-sm text-center sm:text-right">
+          <Typography
+            variant="caption"
+            className=" font-medium text-right md:text-sm"
+          >
             {item.description}
           </Typography>
         )}

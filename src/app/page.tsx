@@ -28,15 +28,7 @@ export default function Home() {
       </SectionWrapper>
 
       {/* templates Slider section */}
-      <SectionWrapper
-        containerClassName=" py-2 md:py-7"
-        actionButton={
-          <Button variant="text" className="text-sm">
-            مشاهده همه
-          </Button>
-        }
-        title="قالب های آماده برای هر کسب و کار"
-      >
+      <SectionWrapper containerClassName="bg-background md:bg-transparent ">
         <TemplateSection />
       </SectionWrapper>
 
@@ -54,9 +46,7 @@ export default function Home() {
       </SectionWrapper>
 
       {/* why us section  */}
-      <SectionWrapper
-        className="bg-background md:bg-transparent"
-      >
+      <SectionWrapper className="bg-background md:bg-transparent">
         <WhyUs />
       </SectionWrapper>
     </>
