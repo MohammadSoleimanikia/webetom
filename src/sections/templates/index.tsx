@@ -18,8 +18,7 @@ export default function TemplateSection() {
   const { isMounted } = useMount();
 
   return (
-    <div className="rounded-2xl bg-background md:py-5">
-    
+    <div className="bg-background rounded-2xl py-5">
       <div className="mb-3 flex flex-col items-center gap-2 sm:relative sm:flex-row sm:justify-center md:mb-5">
         <Typography variant="h2" className="text-center">
           قالب های آماده برای هر کسب و کار
