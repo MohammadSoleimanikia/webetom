@@ -9,9 +9,9 @@ import { Navigation, Pagination, FreeMode } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import NavBtn from "./NavBtn";
+import NavBtn from "@/components/swiper/NavBtn";
 import { useMount } from "@/hooks/useMount";
-import TemplateSectionSkeleton from "./templateSkeleton";
+import TemplateSectionSkeleton from "@/sections/templates/templateSkeleton";
 import { Button, Typography } from "@mui/material";
 
 export default function TemplateSection() {
