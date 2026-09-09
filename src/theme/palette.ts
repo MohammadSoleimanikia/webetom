@@ -261,7 +261,8 @@ export const palette = {
   custom: CUSTOM,
 
   background: {
-    default: "#F1F3F5",
+    
+    default: "#F9F9FA",
     paper: "#FFFFFF",
   },
 
