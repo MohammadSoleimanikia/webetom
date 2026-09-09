@@ -10,14 +10,14 @@ export default function SalesFeatItem({ item }: Props) {
   return (
     <div
       className={clsx(
-        "sm:shadow-card-small flex flex-col items-center justify-center gap-2 rounded-xl p-2",
+        "shadow-card-small flex flex-col items-center justify-center  rounded-xl p-2",
         "flex-row justify-start sm:gap-5 sm:p-4",
       )}
     >
       {/* icon */}
       <div
         className={clsx(
-          "shadow-card-small flex size-14 items-center justify-center rounded-lg",
+          "flex size-14 items-center justify-center rounded-lg",
           "sm:shadow-card-extra-small",
         )}
       >
