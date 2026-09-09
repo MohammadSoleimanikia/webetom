@@ -8,6 +8,7 @@ import { Button } from "@mui/material";
 import WhyUs from "@/sections/whyUs";
 import Plans from "@/sections/plans";
 import OrderProcess from "@/sections/orderProcess";
+import FAQ from "@/sections/faq";
 
 export default function Home() {
   return (
@@ -60,6 +61,11 @@ export default function Home() {
       {/* order process  */}
       <SectionWrapper containerClassName="bg-background md:bg-transparent ">
         <OrderProcess />
+      </SectionWrapper>
+
+      {/* FAQ section */}
+      <SectionWrapper className="bg-background">
+        <FAQ />
       </SectionWrapper>
     </>
   );
