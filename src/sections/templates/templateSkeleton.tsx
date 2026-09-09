@@ -1,4 +1,4 @@
-import { TemplateType } from "@/const/TEMPLATED_DATA";
+import { TemplateType } from "@/data/TEMPLATED_DATA";
 import TemplateCard from "./templateCard";
 
 type Props = {

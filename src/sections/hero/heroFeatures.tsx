@@ -1,4 +1,4 @@
-import { HERO_FEATURES } from "@/const/HERO_FEATURES";
+import { HERO_FEATURES } from "@/data/HERO_FEATURES";
 import FeaturesItem from "./featuresItem";
 import clsx from "clsx";
 

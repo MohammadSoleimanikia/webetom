@@ -1,6 +1,6 @@
 import React from "react";
 import FeatureItemMobile from "./featureItemMobile";
-import { FEATURES } from "@/const/FEATURES";
+import { FEATURES } from "@/data/FEATURES";
 import FeatureCardDesktop from "./featureCardDesktop";
 import clsx from "clsx";
 import { Divider } from "@mui/material";

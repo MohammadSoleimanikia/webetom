@@ -1,4 +1,4 @@
-import type { FeatureItem } from "@/const/FEATURES";
+import type { FeatureItem } from "@/data/FEATURES";
 import { Typography } from "@mui/material";
 
 type Props = {

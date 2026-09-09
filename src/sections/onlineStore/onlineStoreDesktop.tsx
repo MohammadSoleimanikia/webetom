@@ -1,4 +1,4 @@
-import { OnlineStoreType } from "@/const/ONLINE_STORE";
+import { OnlineStoreType } from "@/data/ONLINE_STORE";
 import { Button, Divider, Typography } from "@mui/material";
 import clsx from "clsx";
 import Image from "next/image";

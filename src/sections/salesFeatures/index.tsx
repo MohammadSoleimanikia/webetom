@@ -1,4 +1,4 @@
-import { SALES_FEATURES } from "@/const/SALES_FEATURES";
+import { SALES_FEATURES } from "@/data/SALES_FEATURES";
 import SalesFeatItem from "./salesFeatItem";
 import clsx from "clsx";
 

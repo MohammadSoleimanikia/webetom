@@ -1,4 +1,4 @@
-import { FeatureItem } from "@/const/FEATURES";
+import { FeatureItem } from "@/data/FEATURES";
 import { Typography } from "@mui/material";
 import clsx from "clsx";
 import Image from "next/image";

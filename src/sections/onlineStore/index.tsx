@@ -1,4 +1,4 @@
-import { ONLINE_STORE } from "@/const/ONLINE_STORE";
+import { ONLINE_STORE } from "@/data/ONLINE_STORE";
 import OnlineStoreDesktop from "./onlineStoreDesktop";
 import OnlineStoreMobile from "./onlineStoreMobile";
 

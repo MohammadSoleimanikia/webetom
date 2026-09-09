@@ -1,5 +1,5 @@
 "use client";
-import { TemplateType } from "@/const/TEMPLATED_DATA";
+import { TemplateType } from "@/data/TEMPLATED_DATA";
 import { Button, Typography } from "@mui/material";
 import clsx from "clsx";
 import Image from "next/image";

@@ -1,7 +1,7 @@
 import { Button, Typography } from "@mui/material";
 import { FiPhone } from "react-icons/fi";
 import Image from "next/image";
-import { OnlineStoreType } from "@/const/ONLINE_STORE";
+import { OnlineStoreType } from "@/data/ONLINE_STORE";
 type Props = {
   data: OnlineStoreType;
 };

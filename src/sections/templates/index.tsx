@@ -1,7 +1,7 @@
 "use client";
 
 import TemplateCard from "./templateCard";
-import { TEMPLATES_DATA } from "@/const/TEMPLATED_DATA";
+import { TEMPLATES_DATA } from "@/data/TEMPLATED_DATA";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, FreeMode } from "swiper/modules";
