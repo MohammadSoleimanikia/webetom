@@ -7,6 +7,9 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { FaqType } from "@/data/FAQ";
+import { Button } from "@mui/material";
+import { HiOutlinePhone } from "react-icons/hi";
+import CouncilButtonMobile from "./councilButtonMobile";
 
 type Props = { items: FaqType[] };
 export default function FaqAccordion({ items }: Props) {
@@ -18,7 +21,7 @@ export default function FaqAccordion({ items }: Props) {
     };
 
   return (
-    <div>
+    <div className="w-full ">
       {items.map((item, index) => (
         <Accordion
           key={index}
@@ -43,6 +46,7 @@ export default function FaqAccordion({ items }: Props) {
           </AccordionDetails>
         </Accordion>
       ))}
+      <CouncilButtonMobile link="tel:05137063145"/>
     </div>
   );
 }

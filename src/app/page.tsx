@@ -64,7 +64,7 @@ export default function Home() {
       </SectionWrapper>
 
       {/* FAQ section */}
-      <SectionWrapper className="bg-background">
+      <SectionWrapper className="bg-background md:bg-transparent">
         <FAQ />
       </SectionWrapper>
     </>
