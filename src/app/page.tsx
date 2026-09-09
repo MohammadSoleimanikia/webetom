@@ -7,6 +7,7 @@ import TemplateSection from "@/sections/templates";
 import { Button } from "@mui/material";
 import WhyUs from "@/sections/whyUs";
 import Plans from "@/sections/plans";
+import OrderProcess from "@/sections/orderProcess";
 
 export default function Home() {
   return (
@@ -54,6 +55,11 @@ export default function Home() {
       {/* Plans */}
       <SectionWrapper title="پلن های سایت فروشگاهی ">
         <Plans />
+      </SectionWrapper>
+
+      {/* order process  */}
+      <SectionWrapper containerClassName="bg-background md:bg-transparent ">
+        <OrderProcess />
       </SectionWrapper>
     </>
   );
