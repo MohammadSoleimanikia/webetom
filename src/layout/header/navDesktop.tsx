@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React from "react";
 import NavBtnDesktop from "./navBtnDesktop";
-import { NAV_ITEM } from "@/const/NAV_ITEMS";
+import { NAV_ITEM } from "@/data/NAV_ITEMS";
 
 export default function NavDesktop() {
   return (

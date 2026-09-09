@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 import { useState } from "react";
-import { NAV_ITEM } from "@/const/NAV_ITEMS";
+import { NAV_ITEM } from "@/data/NAV_ITEMS";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import Image from "next/image";
 export default function NavMobile() {
