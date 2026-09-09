@@ -13,20 +13,20 @@ export default function OrderProcessCard({ item, step }: Props) {
     
       <div
         className={clsx(
-          "relative  flex w-full  max-w-52 flex-col items-center justify-between gap-2",
+          "relative  flex w-full max-w-full  sm:max-w-52 flex-col items-center justify-between gap-2",
           "shadow-card-small rounded-2xl bg-white p-3 text-center",
         )}
       >
         {/*step number*/}
         <div
           className={clsx(
-            "bg-primary-light flex size-7 items-center justify-center rounded-full",
+            "bg-primary-light flex size-7 items-center justify-center rounded-full p-1",
             "absolute top-2 right-2",
           )}
         >
           <Typography
             variant="caption"
-            className="text-lg font-semibold text-white"
+            className="text-base font-semibold text-white"
           >
             {step + 1}
           </Typography>
