@@ -20,7 +20,7 @@ export default function PlanCard({ plan }: Props) {
           variant="caption"
           className={clsx(
             "bg-primary absolute -top-1 left-1/2 z-1 -translate-x-1/2 text-nowrap text-white",
-            "w-52 rounded-b-2xl py-1 text-center",
+            "w-52 rounded-b-2xl rounded-t-sm py-1 text-center",
           )}
         >
           پیشنهاد ویژه
