@@ -6,6 +6,7 @@ import SalesFeatures from "@/sections/salesFeatures";
 import TemplateSection from "@/sections/templates";
 import { Button } from "@mui/material";
 import WhyUs from "@/sections/whyUs";
+import Plans from "@/sections/plans";
 
 export default function Home() {
   return (
@@ -48,6 +49,11 @@ export default function Home() {
       {/* why us section  */}
       <SectionWrapper className="bg-background md:bg-transparent">
         <WhyUs />
+      </SectionWrapper>
+
+      {/* Plans */}
+      <SectionWrapper title="پلن های سایت فروشگاهی ">
+        <Plans />
       </SectionWrapper>
     </>
   );
