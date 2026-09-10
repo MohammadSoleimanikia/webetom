@@ -10,6 +10,7 @@ import Plans from "@/sections/plans";
 import OrderProcess from "@/sections/orderProcess";
 import FAQ from "@/sections/faq";
 import VoiceOfCustomer from "@/sections/voiceOfCustomers";
+import LatestBlogPosts from "@/sections/latestBlogPosts";
 
 export default function Home() {
   return (
@@ -72,6 +73,11 @@ export default function Home() {
       {/* Voice of customers section */}
       <SectionWrapper>
         <VoiceOfCustomer />
+      </SectionWrapper>
+
+      {/* templates Slider section */}
+      <SectionWrapper containerClassName="bg-background md:bg-transparent ">
+        <LatestBlogPosts />
       </SectionWrapper>
     </>
   );
