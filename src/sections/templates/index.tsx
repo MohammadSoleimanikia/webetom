@@ -26,7 +26,7 @@ export default function TemplateSection() {
 
         <div className="w-full text-left sm:absolute sm:left-3 sm:w-auto">
           <Button variant="text" className="text-sm">
-            مشاهده همه
+            مشاهده همه نظرات
           </Button>
         </div>
       </div>
