@@ -1,29 +1,33 @@
-import { TemplateType } from "@/data/TEMPLATED_DATA";
-import TemplateCard from "./templateCard";
+import { Skeleton } from "@mui/material";
 
-type Props = {
-  items: TemplateType[];
-};
-
-export default function TemplateSectionSkeleton({ items }: Props) {
+export default function TemplateSkeleton() {
   return (
-    <div dir="rtl" className="relative h-full w-full overflow-hidden">
-      <div className="flex h-full w-full flex-nowrap gap-5 px-2">
-        {items.map((item) => (
-          <div
-            key={item.title}
-            className="
-              h-full! min-w-0 flex-none
-              basis-full
-              sm:basis-[calc((100%-20px)/2)]
-              lg:basis-[calc((100%-40px)/3)]
-              2xl:basis-[calc((100%-60px)/4)]
-            "
-          >
-            <TemplateCard item={item} />
-          </div>
-        ))}
+    <div className="shadow-card-extra-small mx-1 my-1 w-[calc(100%-8px)] rounded-2xl p-4">
+      {/* image */}
+      <div>
+        <Skeleton
+          variant="rounded"
+          animation="wave"
+          className="h-40! w-full! rounded-2xl!"
+        />
       </div>
+
+      {/* title */}
+      <div className="flex justify-center gap-3">
+        <Skeleton
+          variant="rounded"
+          animation="wave"
+          className="mt-4 h-5! w-24! rounded!"
+        />
+        <Skeleton
+          variant="circular"
+          animation="wave"
+          className="mt-4 size-5! rounded!"
+        />
+      </div>
+
+      {/* btn */}
+      <Skeleton variant="rounded" animation="wave" className="mt-3 h-8! w-full!" />
     </div>
   );
 }

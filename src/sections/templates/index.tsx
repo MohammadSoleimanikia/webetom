@@ -11,8 +11,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import NavBtn from "@/components/swiper/NavBtn";
 import { useMount } from "@/hooks/useMount";
-import TemplateSectionSkeleton from "@/sections/templates/templateSkeleton";
+
 import { Button, Typography } from "@mui/material";
+import TemplateSwiperSkeleton from "./templateSwiperSkeleton";
 
 export default function TemplateSection() {
   const { isMounted } = useMount();
@@ -34,7 +35,7 @@ export default function TemplateSection() {
       <div className="relative flex w-full items-center gap-4">
         <NavBtn side="previous" className=" " />
         {!isMounted ? (
-          <TemplateSectionSkeleton items={TEMPLATES_DATA} />
+          <TemplateSwiperSkeleton count={TEMPLATES_DATA.length ?? 4} />
         ) : (
           <Swiper
             modules={[Navigation, Pagination, FreeMode]}

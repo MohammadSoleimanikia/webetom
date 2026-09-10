@@ -13,6 +13,7 @@ import { Button, Typography } from "@mui/material";
 import NavBtn from "@/components/swiper/NavBtn";
 import VocCard from "./VocCard";
 import { VOICE_OF_CUSTOMERS } from "@/data/VOICE_OF_CUSTOMERS";
+import VocSwiperSkeleton from "./vocSwiperSkeleton";
 
 export default function VoiceOfCustomer() {
   const { isMounted } = useMount();
@@ -34,7 +35,7 @@ export default function VoiceOfCustomer() {
       <div className="relative flex w-full items-center gap-4">
         <NavBtn side="previous" />
         {!isMounted ? (
-          <>Skeleton</>
+          <VocSwiperSkeleton count={VOICE_OF_CUSTOMERS.length}/>
         ) : (
           <Swiper
             modules={[Navigation, Pagination, FreeMode]}
