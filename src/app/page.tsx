@@ -9,6 +9,7 @@ import WhyUs from "@/sections/whyUs";
 import Plans from "@/sections/plans";
 import OrderProcess from "@/sections/orderProcess";
 import FAQ from "@/sections/faq";
+import VoiceOfCustomer from "@/sections/voiceOfCustomers";
 
 export default function Home() {
   return (
@@ -66,6 +67,11 @@ export default function Home() {
       {/* FAQ section */}
       <SectionWrapper className="bg-background md:bg-transparent">
         <FAQ />
+      </SectionWrapper>
+
+      {/* Voice of customers section */}
+      <SectionWrapper>
+        <VoiceOfCustomer />
       </SectionWrapper>
     </>
   );
