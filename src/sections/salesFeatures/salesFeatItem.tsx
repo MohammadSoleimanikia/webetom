@@ -10,7 +10,7 @@ export default function SalesFeatItem({ item }: Props) {
   return (
     <div
       className={clsx(
-        "shadow-card-small flex flex-col items-center justify-center  rounded-xl p-2",
+        "shadow-card-small flex flex-col items-center justify-center rounded-xl p-2",
         "flex-row justify-start sm:gap-5 sm:p-4",
       )}
     >
@@ -21,26 +21,22 @@ export default function SalesFeatItem({ item }: Props) {
           "sm:shadow-card-extra-small",
         )}
       >
-        <Icon className={clsx(item.color, "size-8")} />
+        <Icon className={clsx("size-8")} style={{ color: item.color }} />
       </div>
 
       {/* content */}
-      <div
-        className={clsx(
-          "flex flex-col items-start space-y-1",
-        )}
-      >
+      <div className={clsx("flex flex-col items-start space-y-1")}>
         {/* title */}
         <Typography
           variant="body2"
-          className="font-semibold text-right md:text-base"
+          className="text-right font-semibold md:text-base"
         >
           {item.title}
         </Typography>
         {item.description && (
           <Typography
             variant="caption"
-            className=" font-medium text-right md:text-sm"
+            className="text-right font-medium md:text-sm"
           >
             {item.description}
           </Typography>

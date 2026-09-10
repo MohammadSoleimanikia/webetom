@@ -14,30 +14,31 @@ export type FeatureItem = {
   color?: string;
   description?: ReactNode | string;
 };
+
 export const FEATURES: FeatureItem[] = [
   {
     title: "تحویل حضوری",
     icon: PiHandshake,
-    color: "text-custom-blue",
-    description: "سایت و مدارک را حضوری تحویل میدهیم",
+    color: "#2072D9",
+    description: "سایت و مدارک را حضوری تحویل می‌دهیم",
   },
   {
     title: "آموزش حضوری",
     icon: FaChalkboardTeacher,
-    color: "text-custom-purple",
+    color: "#722CDB",
     description: "آموزش کامل کار با سایت به صورت حضوری",
   },
   {
     title: "قرارداد حضوری",
     icon: FaFileSignature,
-    color: "text-secondary",
-    description: "قرارداد  رسمی و شفاف به صورت حضوری ",
+    color: "#FE720C",
+    description: "قرارداد رسمی و شفاف به صورت حضوری",
   },
   {
     title: "پشتیبانی حضوری",
     icon: MdSupportAgent,
-    color: "text-custom-green",
-    description: " پشتیبانی سریع و حضوری هر زمان که نیاز داشته باشید",
+    color: "#039747",
+    description: "پشتیبانی سریع و حضوری هر زمان که نیاز داشته باشید",
   },
   {
     title: (
@@ -46,7 +47,7 @@ export const FEATURES: FeatureItem[] = [
       </>
     ),
     icon: VscRocket,
-    color: "text-custom-blue",
+    color: "#2072D9",
     description: (
       <>
         سایت شما در کمتر از <span className="text-secondary">24</span> ساعت

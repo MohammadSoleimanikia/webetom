@@ -12,7 +12,7 @@ export const PLANS: Plan[] = [
   {
     title: "حرفه‌ای",
     description: "مناسب کسب‌وکارهای بزرگ",
-    color: "secondary",
+    color: "#FE720C",
     isSpecial: false,
     price: 19900000,
     items: [
@@ -29,7 +29,7 @@ export const PLANS: Plan[] = [
   {
     title: "استاندارد",
     description: "پرفروش‌ترین پلن",
-    color: "primary",
+    color: "#0141C6",
     isSpecial: true,
     price: 13900000,
     items: [
@@ -42,11 +42,10 @@ export const PLANS: Plan[] = [
     ],
     href: "/plans/standard",
   },
-
   {
     title: "اقتصادی",
     description: "مناسب شروع کسب‌وکارهای نوپا",
-    color: "custom-green",
+    color: "#039747",
     isSpecial: false,
     price: 9900000,
     items: [

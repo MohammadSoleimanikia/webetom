@@ -11,7 +11,7 @@ type Props = {
 export default function TemplateCard({ item }: Props) {
   const Icon = item.icon;
   return (
-    <div className="shadow-card-small bg-white flex min-h-60 w-full flex-col rounded-xl p-2">
+    <div className="shadow-card-small flex min-h-60 w-full flex-col rounded-xl bg-white p-2">
       {/* image section */}
       <div className="relative h-40 w-full overflow-hidden rounded-xl">
         <Image
@@ -26,12 +26,18 @@ export default function TemplateCard({ item }: Props) {
         <div className="w-full">
           <Typography
             variant="h6"
-            className={clsx("flex items-center justify-center text-center font-bold",
-              "gap-3"
+            className={clsx(
+              "flex items-center justify-center text-center font-bold",
+              "gap-3",
             )}
           >
             {item.title}
-            <Icon className={`${item.color} size-6`} />
+            <Icon
+              className={`size-6`}
+              style={{
+                color: item.color,
+              }}
+            />
           </Typography>
         </div>
         <Button

@@ -33,9 +33,12 @@ export default function BlogPostCard({ item }: Props) {
           {/* label */}
           <div
             className={clsx(
-              `bg-${item.color} absolute w-fit rounded-lg px-2 py-0.5 text-white`,
+              `absolute w-fit rounded-lg px-2 py-0.5 text-white`,
               "top-0 -translate-y-1/2",
             )}
+            style={{
+              backgroundColor:item.color
+            }}
           >
             <Typography
               className="flex items-center justify-center px-1 py-0.5 text-xs font-semibold"

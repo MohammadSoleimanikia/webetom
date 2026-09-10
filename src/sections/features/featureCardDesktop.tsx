@@ -1,7 +1,7 @@
 import { FeatureItem } from "@/data/FEATURES";
 import { Typography } from "@mui/material";
 import clsx from "clsx";
-import React from "react";
+
 type Prop = {
   item: FeatureItem;
 };

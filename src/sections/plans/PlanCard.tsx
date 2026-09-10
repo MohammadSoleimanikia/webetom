@@ -20,7 +20,7 @@ export default function PlanCard({ plan }: Props) {
           variant="caption"
           className={clsx(
             "bg-primary absolute -top-1 left-1/2 z-1 -translate-x-1/2 text-nowrap text-white",
-            "w-52 rounded-b-2xl rounded-t-sm py-1 text-center",
+            "w-52 rounded-t-sm rounded-b-2xl py-1 text-center",
           )}
         >
           پیشنهاد ویژه
@@ -30,7 +30,10 @@ export default function PlanCard({ plan }: Props) {
       {/* title */}
       <Typography
         variant="h3"
-        className={clsx(`text-${plan.color}`, "text-xl font-bold")}
+        className={clsx("text-xl font-bold")}
+        style={{
+          color: plan.color,
+        }}
       >
         {plan.title}
       </Typography>
@@ -55,7 +58,12 @@ export default function PlanCard({ plan }: Props) {
           <div key={index} className="flex w-full items-start gap-1">
             {/* check icon  */}
             <div className="flex size-5 items-center justify-center rounded-md bg-gray-100">
-              <TbCheck className={clsx(`text-${plan.color}`, "size-4")} />
+              <TbCheck
+                className={clsx("size-4")}
+                style={{
+                  color: plan.color,
+                }}
+              />
             </div>
 
             <Typography variant="body1" className="text-sm">
@@ -66,7 +74,9 @@ export default function PlanCard({ plan }: Props) {
       </div>
 
       {/* button */}
-      <Button className={clsx("mt-auto w-full", `bg-${plan.color}`)}>
+      <Button className={clsx("mt-auto w-full")} style={{
+        backgroundColor:plan.color
+      }}>
         {`سفارش پلن ${plan.title}`}
       </Button>
     </div>

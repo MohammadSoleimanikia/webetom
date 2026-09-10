@@ -37,7 +37,12 @@ export default function WhyUsDesktop({ items }: Props) {
                 className="shadow-card-small flex items-center gap-1 rounded-2xl bg-white p-2"
               >
                 {/* icon */}
-                <Icon className={clsx(item.color, "size-14 stroke-1")} />
+                <Icon
+                  className={clsx("size-14 stroke-1")}
+                  style={{
+                    color: item.color,
+                  }}
+                />
                 {/* text */}
                 <div className="flex flex-col">
                   <Typography variant="h5" className="text-lg">

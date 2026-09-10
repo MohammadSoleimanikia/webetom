@@ -15,7 +15,9 @@ export default function FeatureItemMobile({ item }: Props) {
           "shadow-card-small"
         )}
       >
-        <Icon className={`size-6 ${item.color}`} />
+        <Icon className={`size-6`} style={{
+          color:item.color
+        }}/>
       </div>
       <Typography variant="body2" className="text-xs font-semibold">
         {item.title}
