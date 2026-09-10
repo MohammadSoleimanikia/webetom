@@ -40,4 +40,28 @@ export const BLOG_POSTS: BlogPostType[] = [
     title: "راهنمای کامل سئو برای سایت فروشگاهی",
     date: new Date("2024-05-30"),
   },
+  {
+    link:'/',
+    imageSrc: "/images/blogPost.webp",
+    label: "مفید",
+    color: "custom-purple",
+    title: "راهنمای کامل فروش برای سایت فروشگاهی",
+    date: new Date("2024-05-30"),
+  },
+  {
+    link:'/',
+    imageSrc: "/images/blogPost.webp",
+    label: "مفید",
+    color: "custom-green",
+    title: "راهنمای کامل طراحی سایت فروشگاهی",
+    date: new Date("2024-05-30"),
+  },
+  {
+    link:'/',
+    imageSrc: "/images/blogPost.webp",
+    label: "مفید",
+    color: "custom-red",
+    title: "چگونه فروش خود را بالا ببریم",
+    date: new Date("2024-05-30"),
+  },
 ];
