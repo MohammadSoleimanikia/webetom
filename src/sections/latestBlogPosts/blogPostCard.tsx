@@ -13,9 +13,11 @@ type Props = {
 
 export default function BlogPostCard({ item }: Props) {
   return (
-    <Link href={item.link} className="block w-full">
+    <Link
+      href={item.link}
+      className="group block overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+    >
       <div className="shadow-card-extra-small relative flex h-60 w-full flex-col overflow-hidden rounded-xl bg-white">
-        
         {/* image */}
         <div className="relative h-1/2 w-full overflow-hidden rounded-lg">
           <Image
