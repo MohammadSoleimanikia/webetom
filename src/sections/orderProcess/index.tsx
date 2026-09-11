@@ -13,7 +13,7 @@ export default function OrderProcess() {
       </div>
 
       
-      <div className="relative mx-auto w-full max-w-4xl">
+      <div className="relative mx-auto w-full max-w-3xl">
         
 
         {/* line */}
