@@ -11,7 +11,7 @@ export default function PlanCard({ plan }: Props) {
       className={clsx(
         "shadow-card-extra-small relative flex flex-col items-center rounded-lg",
         "w-full max-w-80 gap-2 p-6 pb-3",
-        plan.isSpecial && "border-primary border-2",
+        plan.isSpecial && "border-primary pt-8 border-2",
       )}
     >
       {/* special header */}
