@@ -39,4 +39,20 @@ export const VOICE_OF_CUSTOMERS: CustomerComment[] = [
       "ظاهر سایت فوق‌العاده‌ست و فروش آنلاینمون بعد از راه‌اندازی چند برابر شد.",
     rating: 5,
   },
+  {
+    avatarSrc: "/images/avatar.webp",
+    name: "مریم رضایی",
+    profession: "فروشگاه آرایشی",
+    comment:
+      "ظاهر سایت فوق‌العاده‌ست و فروش آنلاینمون بعد از راه‌اندازی چند برابر شد.",
+    rating: 5,
+  },
+  {
+    avatarSrc: "/images/avatar.webp",
+    name: "مریم رضایی",
+    profession: "فروشگاه آرایشی",
+    comment:
+      "ظاهر سایت فوق‌العاده‌ست و فروش آنلاینمون بعد از راه‌اندازی چند برابر شد.",
+    rating: 5,
+  },
 ];
