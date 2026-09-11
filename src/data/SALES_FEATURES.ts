@@ -1,61 +1,57 @@
-import { FeatureItem } from "./FEATURES";
+export type SalesFeatType={
+  title:string;
+  description:string;
+  iconSrc:string;
+  color:string
+}
 
-import { RiShoppingBagLine } from "react-icons/ri";
-import { IoCartOutline } from "react-icons/io5";
-import { LiaSmsSolid } from "react-icons/lia";
-import { MdPayment } from "react-icons/md";
-import { MdSupportAgent } from "react-icons/md";
-import { SiPwa } from "react-icons/si";
-import { TbSeo } from "react-icons/tb";
-import { IoDesktopSharp } from "react-icons/io5";
-
-export const SALES_FEATURES: FeatureItem[] = [
+export const SALES_FEATURES: SalesFeatType[] = [
   {
     title: "مدیریت محصولات",
     description: "افزودن نامحدود محصول",
-    icon: RiShoppingBagLine,
+    iconSrc: '/images/salesFeat/product.webp',
     color: "#FE720C",
   },
   {
     title: "مدیریت سفارشات",
     description: "مدیریت آسان سفارش‌ها",
-    icon: IoCartOutline,
+    iconSrc: '/images/salesFeat/order.webp',
     color: "#0141C6",
   },
   {
     title: "پنل پیامکی",
     description: "ارسال پیامک‌ها به مشتریان",
-    icon: LiaSmsSolid,
+    iconSrc: '/images/salesFeat/sms.webp',
     color: "#722CDB",
   },
   {
     title: "درگاه پرداخت آنلاین",
     description: "اتصال به تمامی درگاه‌های بانکی",
-    icon: MdPayment,
+    iconSrc: '/images/salesFeat/pay.webp',
     color: "#039747",
   },
   {
     title: "پشتیبانی و آموزش حضوری",
     description: "همراه شما در مشهد",
-    icon: MdSupportAgent,
+    iconSrc: '/images/salesFeat/support.webp',
     color: "#F53641",
   },
   {
     title: "اپلیکیشن PWA",
     description: "نصب روی موبایل مثل اپ",
-    icon: SiPwa,
+    iconSrc: '/images/salesFeat/pwa.webp',
     color: "#38BDF8",
   },
   {
     title: "سئو کاملاً بهینه",
     description: "ساختار سئو شده برای گوگل",
-    icon: TbSeo,
+    iconSrc: '/images/salesFeat/seo.webp',
     color: "#0F2A4A",
   },
   {
     title: "طراحی واکنش‌گرا",
     description: "سازگار با موبایل و تبلت",
-    icon: IoDesktopSharp,
+    iconSrc: '/images/salesFeat/responsive.webp',
     color: "#2072D9",
   },
 ];
