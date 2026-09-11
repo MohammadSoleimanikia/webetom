@@ -51,7 +51,7 @@ export default function Header() {
             !isScrolled ? "h-10 xl:h-14" : "h-7 xl:h-9",
           )}
         />
-
+        
         <Typography
           variant="h1"
           className={clsx(
