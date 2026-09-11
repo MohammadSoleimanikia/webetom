@@ -10,7 +10,7 @@ export default function WhyUsMobile({ items }: Props) {
     <div className="md:hidden">
       <Typography variant="h2" className="mb-3 text-center">
         
-        چرا باید ما را انتخاب کنید؟
+        چرا ما را انتخاب کنید؟
       </Typography>
 
       {/* items section */}
@@ -29,18 +29,18 @@ export default function WhyUsMobile({ items }: Props) {
               key={index}
               className={clsx(
                 "flex w-full flex-col items-center rounded-xl bg-white",
-                "shadow-card-small space-y-2 p-2 text-center",
+                "shadow-card-extra-small space-y-1 p-2 text-center",
                 index === items.length - 1 &&
                   "col-span-2 justify-self-center sm:col-span-1",
               )}
             >
-              <Icon className={clsx("size-10  text-primary")} />
-              <Typography variant="h6" className="font-semibold text-primary">
+              <Icon className={clsx("size-10  text-primary ")} />
+              <Typography variant="h6" className="font-semibold text-primary-dark">
                 {item.title}
               </Typography>
               <Typography
                 variant="caption"
-                className="text-sm  font-medium text-gray-700"
+                className="text-sm  font-semibold text-gray-500"
               >
                 {item.description}
               </Typography>
