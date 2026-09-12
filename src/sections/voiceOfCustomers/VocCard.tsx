@@ -18,7 +18,7 @@ export default function VocCard({ item }: Props) {
             key={index}
             className={clsx(
               "size-4",
-              index < item.rating ? "text-yellow-400" : "text-gray-300",
+              index < item.rating ? "text-secondary" : "text-gray-300",
             )}
           />
         ))}
