@@ -10,7 +10,7 @@ export default function Features() {
     <>
       {/* // mobile--------------------------------------------- */}
       <div className="flex flex-wrap justify-around gap-5 sm:hidden">
-        {FEATURES.map((item,index) => (
+        {FEATURES.map((item, index) => (
           <FeatureItemMobile key={index} item={item} />
         ))}
       </div>
@@ -19,7 +19,7 @@ export default function Features() {
       <div
         className={clsx(
           "bg-primary hidden w-full rounded-xl",
-          "items-start justify-between gap-2 p-2 md:px-5 xl:px-20 py-5 sm:flex",
+          "items-start justify-between gap-2 p-2 md:p-5 xl:p-11 sm:flex",
         )}
       >
         {FEATURES.map((item, index) => (
