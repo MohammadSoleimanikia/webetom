@@ -2,17 +2,26 @@ import { Button, Typography } from "@mui/material";
 import { FiPhone } from "react-icons/fi";
 import Image from "next/image";
 import { OnlineStoreType } from "@/data/ONLINE_STORE";
+import { clsx } from "clsx";
+import { padding } from "@/const/LAYOUT";
+import { contactInfo } from "@/const/contactInfo";
+import Link from "next/link";
 type Props = {
   data: OnlineStoreType;
 };
 
 export default function OnlineStoreMobile({ data }: Props) {
   return (
-    <div className="relative flex min-h-110 flex-col md:hidden pb-5">
+    <div
+      className={clsx(
+        "relative flex min-h-110 flex-col md:hidden",
+        padding.section,
+      )}
+    >
       {/* content */}
       <div className="flex flex-1">
         {/* right section */}
-        <div className="flex w-1/2 flex-col space-y-5 py-5 text-center text-white">
+        <div className="flex w-1/2 flex-col space-y-5 text-right text-white">
           <Typography variant="h2" className="text-4xl">
             {data.title}
           </Typography>
@@ -35,6 +44,7 @@ export default function OnlineStoreMobile({ data }: Props) {
             })}
           </div>
           <Button
+            href={contactInfo.phone}
             color="secondary"
             className="mt-auto hidden sm:flex"
             endIcon={<FiPhone />}
@@ -55,7 +65,13 @@ export default function OnlineStoreMobile({ data }: Props) {
       </div>
 
       {/* CTA */}
-      <Button color="secondary" className="sm:hidden" endIcon={<FiPhone />}>
+
+      <Button
+        href={contactInfo.phone}
+        color="secondary"
+        className="sm:hidden"
+        endIcon={<FiPhone />}
+      >
         از مشاوره رایگان استفاده کنید
       </Button>
     </div>

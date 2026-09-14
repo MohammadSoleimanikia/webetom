@@ -1,3 +1,5 @@
+import { contactInfo } from "@/const/contactInfo";
+import { padding } from "@/const/LAYOUT";
 import { OnlineStoreType } from "@/data/ONLINE_STORE";
 import { Button, Divider, Typography } from "@mui/material";
 import clsx from "clsx";
@@ -20,16 +22,15 @@ export default function OnlineStoreDesktop({ data }: Props) {
       {/* content side */}
       <div
         className={clsx(
-          "flex w-1/2 flex-col items-center p-5 lg:p-8 xl:px-14",
+          "flex w-1/2 flex-col items-start",
+          padding.section,
           "space-y-8",
         )}
       >
         {/* header */}
         <div className="space-y-3">
-          <Typography variant="h2" >
-            {data.title}
-          </Typography>
-          <Typography variant="body1" className="text-lg" >
+          <Typography variant="h2">{data.title}</Typography>
+          <Typography variant="body1" className="text-lg">
             {data.description}
           </Typography>
         </div>
@@ -37,11 +38,12 @@ export default function OnlineStoreDesktop({ data }: Props) {
         {/* feature items */}
         <div className="flex w-full justify-between">
           {data.items.map((item, index) => {
-            const Icon = item.icon;
             return (
               <React.Fragment key={index}>
                 <div className="flex w-full flex-col items-center gap-2">
-                  <Icon className="size-12 stroke-1 lg:size-14" />
+                  <div className="relative size-10 lg:size-15">
+                    <Image src={item.imageSrc} fill alt={item.title} />
+                  </div>
                   <Typography
                     variant="body1"
                     className="px-2 text-center text-sm lg:text-base"
@@ -67,9 +69,11 @@ export default function OnlineStoreDesktop({ data }: Props) {
           })}
         </div>
         {/* CTA */}
+
         <Button
+          href={contactInfo.phone}
           color="secondary"
-          className="mt-auto px-15 xl:px-20"
+          className="mx-auto mt-auto px-15 xl:px-20"
           endIcon={<FiPhone />}
         >
           از مشاوره رایگان استفاده کنید
