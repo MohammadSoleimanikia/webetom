@@ -1,26 +1,37 @@
 import { IconButton, type IconButtonProps } from "@mui/material";
 import clsx from "clsx";
-import { FaCircleChevronLeft } from "react-icons/fa6";
+import { FaChevronLeft } from "react-icons/fa6";
 
 type Props = {
   side: "next" | "previous";
+  nextEl: string;
+  previousEl: string;
 } & IconButtonProps;
 
-export default function NavBtn({ side, className, ...others }: Props) {
+export default function NavBtn({
+  nextEl,
+  previousEl,
+  side,
+  className,
+  ...others
+}: Props) {
   return (
     <IconButton
-      size="large"
+      size="small"
       color="primary"
       className={clsx(
-        "absolute top-1/2 z-10 hidden shrink-0 -translate-y-1/2 rounded-full bg-white/5 ",
-        " shadow-md transition-all hover:bg-white/50 hover:shadow-lg sm:flex",
-        side === "next" ? "template-next  left-0" : "template-prev right-0",
+        "bg-primary absolute top-7/12 z-10 hidden size-8 shrink-0 -translate-y-1/2 rounded-full opacity-70 transition-all duration-300",
+        "hover:bg-primary-dark shadow-md transition-all hover:shadow-lg sm:flex",
+        side === "next" ? `${nextEl} left-4` : `${previousEl} right-4`,
         className,
       )}
       {...others}
     >
-      <FaCircleChevronLeft
-        className={clsx("text-3xl", side === "previous" && "rotate-180")}
+      <FaChevronLeft
+        className={clsx(
+          "size-6 text-white",
+          side === "previous" && "rotate-180",
+        )}
       />
     </IconButton>
   );
