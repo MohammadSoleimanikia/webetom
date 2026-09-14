@@ -3,11 +3,21 @@ import FaqAccordion from "./faqAccordion ";
 import { FAQ_DATA } from "@/data/FAQ";
 import clsx from "clsx";
 import Image from "next/image";
-import { IoCartOutline } from "react-icons/io5";
 import { FiPhone } from "react-icons/fi";
+import { TbShoppingCart } from "react-icons/tb";
+import TitleSection from "@/components/titleSection";
+import { padding } from "@/const/LAYOUT";
+import Link from "next/link";
+import { routes } from "@/const/links";
 export default function FAQ() {
   return (
-    <div className="bg-background flex rounded-2xl">
+    <div
+      className={clsx(
+        "bg-background flex justify-center rounded-2xl",
+        padding.section,
+        "lg:p-0",
+      )}
+    >
       {/* left section */}
       <div className="bg-primary hidden rounded-2xl lg:flex lg:w-2/3">
         {/* text section */}
@@ -27,20 +37,26 @@ export default function FAQ() {
             </Typography>
           </div>
 
-          <div className="flex flex-col items-center gap-2 w-5/6">
+          <div className="flex w-5/6 flex-col items-center gap-2">
             <Typography variant="h4" className="font-normal">
               مشاوره رایگان و بدون تعهد
             </Typography>
-            <div className="flex flex-col w-full">
-              <Button className=" w-full" color="secondary" endIcon={<IoCartOutline />}>
-                سفارش سایت
-              </Button>
+            <div className="flex w-full flex-col">
+              <Link className="w-full" href={routes.order}>
+                <Button
+                  className="w-full"
+                  color="secondary"
+                  endIcon={<TbShoppingCart className="stroke-2" />}
+                >
+                  سفارش سایت
+                </Button>
+              </Link>
               <Button
-                LinkComponent={'a'}
+                LinkComponent={"a"}
                 href="tel:05137063145"
-                className="font-normal text-white w-full hover:bg-primary-light"
+                className="hover:bg-primary-light w-full font-normal text-white"
                 variant="text"
-                endIcon={<FiPhone className="stroke-1" />}
+                endIcon={<FiPhone className="stroke-2" />}
               >
                 05137063145
               </Button>
@@ -59,18 +75,9 @@ export default function FAQ() {
       </div>
 
       {/* right section */}
-      <div className="md:p-5 lg:w-1/3">
+      <div className={clsx("lg:w-1/3 lg:p-5")}>
         {/* header */}
-        <div
-          className={clsx(
-            "mb-3 flex flex-col items-center gap-2",
-            "justify-center sm:relative sm:flex-row md:mb-5 lg:justify-start",
-          )}
-        >
-          <Typography variant="h2" className="text-center">
-            سوالات متداول
-          </Typography>
-        </div>
+        <TitleSection title={"سولات متداول"} subTitle="سوال ها" />
 
         {/* mobile content */}
         <FaqAccordion items={FAQ_DATA} />
