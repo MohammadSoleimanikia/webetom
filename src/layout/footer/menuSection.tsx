@@ -5,10 +5,10 @@ type Props = {
 };
 export default function MenuSection({ menu }: Props) {
   return (
-    <div className="border-secondary w-full border-t-2 pt-3 md:border-0">
+    <div className="w-full ">
       <Typography
         variant="h5"
-        className="border-secondary w-fit text-xl md:border-b-2"
+        className="border-secondary w-fit text-xl border-b-2"
       >
         {menu.title}
       </Typography>

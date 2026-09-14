@@ -8,7 +8,7 @@ import { FOOTER_MENUS } from "@/data/FOOTER_MENU";
 
 export default function Footer() {
   return (
-    <footer className={clsx("bg-primary-darker py-5 text-white", TOP_MARGIN)}>
+    <footer className={clsx("bg-primary-darker py-10 text-white")}>
       <Container maxWidth="xxl">
         {/* main section */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -21,7 +21,7 @@ export default function Footer() {
         </div>
 
         {/* lower section (copy write text) */}
-        <div className="mt-8 flex justify-center pt-5">
+        <div className="mt-8 flex justify-center pt-5 border-t border-primary-light">
           {/* copy write text */}
           <div>
             <Typography className="h-6 font-medium text-white">
