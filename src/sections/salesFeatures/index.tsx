@@ -1,13 +1,19 @@
 import { SALES_FEATURES } from "@/data/SALES_FEATURES";
 import SalesFeatItem from "./salesFeatItem";
-import clsx from "clsx";
+import TitleSection from "@/components/titleSection";
 
 export default function SalesFeatures() {
   return (
-    <div className={clsx("grid grid-cols-2 gap-5","sm:grid-cols-3 lg:grid-cols-4 lg:gap-10")}>
-      {SALES_FEATURES.map((item, index) => (
-        <SalesFeatItem item={item} key={index}/>
-      ))}
+    <div>
+      <TitleSection
+        title={"امکاناتی که فروش شما رو بیشتر میکند."}
+        subTitle="امکانات"
+      />
+      <div className="w-full flex flex-wrap justify-center lg:justify-between gap-5">
+        {SALES_FEATURES.map((item, index) => (
+          <SalesFeatItem item={item} key={index} />
+        ))}
+      </div>
     </div>
   );
 }
