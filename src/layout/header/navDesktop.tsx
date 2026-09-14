@@ -7,7 +7,7 @@ export default function NavDesktop() {
   return (
     <nav
       className={clsx(
-        "relative z-20 flex flex-1",
+        "relative z-20 flex",
         "items-center",
         "gap-3 2xl:gap-7",
       )}
