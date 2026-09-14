@@ -21,11 +21,10 @@ export default function FaqAccordion({ items }: Props) {
     };
 
   return (
-    <div className="w-full ">
+    <div className="w-full  space-y-2">
       {items.map((item, index) => (
         <Accordion
           key={index}
-          disableGutters
           elevation={0}
           square
           expanded={expanded === item.question}
