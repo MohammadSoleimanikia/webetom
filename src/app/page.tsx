@@ -11,6 +11,9 @@ import OrderProcess from "@/sections/orderProcess";
 import FAQ from "@/sections/faq";
 import VoiceOfCustomer from "@/sections/voiceOfCustomers";
 import LatestBlogPosts from "@/sections/latestBlogPosts";
+import clsx from "clsx";
+import { padding } from "@/const/LAYOUT";
+
 
 export default function Home() {
   return (
@@ -28,55 +31,54 @@ export default function Home() {
       </SectionWrapper>
 
       {/*features section  */}
-      <SectionWrapper>
+      <SectionWrapper >
         <Features />
       </SectionWrapper>
 
       {/* templates Slider section */}
-      <SectionWrapper containerClassName="bg-background md:bg-transparent ">
+      <SectionWrapper containerClassName="relative">
         <TemplateSection />
       </SectionWrapper>
 
       {/* sales feature section */}
-      <SectionWrapper
-        containerClassName="pt-3"
-        title="امکاناتی که فروش شما را بیشتر می کند"
-      >
+      <SectionWrapper>
         <SalesFeatures />
       </SectionWrapper>
 
-      {/*  Online Store Section */}
-      <SectionWrapper containerClassName="bg-primary md:bg-transparent pt-3 ">
+    {/*  Online Store Section */}
+      <SectionWrapper
+        containerClassName={clsx("bg-primary md:bg-transparent md:py-0")}
+      >
         <OnlineStoreSection />
       </SectionWrapper>
 
       {/* why us section  */}
-      <SectionWrapper className="bg-background md:bg-transparent">
+      <SectionWrapper className={clsx(" ")}>
         <WhyUs />
       </SectionWrapper>
 
       {/* Plans */}
-      <SectionWrapper title="پلن های سایت فروشگاهی ">
+      <SectionWrapper>
         <Plans />
       </SectionWrapper>
 
       {/* order process  */}
-      <SectionWrapper containerClassName="bg-background md:bg-transparent ">
+      <SectionWrapper >
         <OrderProcess />
       </SectionWrapper>
 
       {/* FAQ section */}
-      <SectionWrapper className="bg-background md:bg-transparent">
+      <SectionWrapper >
         <FAQ />
       </SectionWrapper>
 
       {/* Voice of customers section */}
-      <SectionWrapper>
+      <SectionWrapper containerClassName="relative">
         <VoiceOfCustomer />
       </SectionWrapper>
 
-      {/* templates Slider section */}
-      <SectionWrapper containerClassName="bg-background md:bg-transparent ">
+      {/* latest blog Slider section */}
+      <SectionWrapper containerClassName="relative">
         <LatestBlogPosts />
       </SectionWrapper>
     </>
