@@ -1,3 +1,4 @@
+import { contactInfo } from "@/const/contactInfo";
 import type { IconType } from "react-icons";
 type MenuItem = {
   icon: IconType;
@@ -98,22 +99,22 @@ export const FOOTER_MENUS: MenuType[] = [
       {
         title: "مشهد، خیابان امام‌رضا،پلاک 173",
         icon: FiMapPin,
-        link: "https://nshn.ir/48_b1dzq0JjxLY",
+        link: contactInfo.address,
       },
       {
         title: "051-37063145",
-        link: "tel:05137063145",
+        link: contactInfo.phone,
         icon: FiPhone,
       },
       {
         title: "0915-122-4567",
         icon: FiSmartphone,
-        link: "tel:09151234567",
+        link: contactInfo.mobile,
       },
       {
         title: "info@sitom.ir",
         icon: FiMail,
-        link: "mailto:09151234567",
+        link: contactInfo.email,
       },
     ],
   },

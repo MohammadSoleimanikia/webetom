@@ -43,15 +43,20 @@ export const FEATURES: FeatureItem[] = [
   {
     title: (
       <>
-        نصب در کمتر از <span className="text-secondary">24</span> ساعت
+        نصب در کمتر از{" "}
+        <span className="text-secondary text-base font-semibold md:text-lg md:font-semibold">
+          24
+        </span>{" "}
+        ساعت
       </>
     ),
     icon: VscRocket,
     color: "#2072D9",
     description: (
       <>
-        سایت شما در کمتر از <span className="text-secondary">24</span> ساعت
-        آماده تحویل است
+        سایت شما در کمتر از{" "}
+        <span className="text-secondary text-base sm:font-semibold">24</span>{" "}
+        ساعت آماده تحویل است
       </>
     ),
   },

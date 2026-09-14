@@ -1,27 +1,23 @@
 
-import { PiHandshake } from "react-icons/pi";
-import { CiMobile3 } from "react-icons/ci";
-import { MdOutlinePayment } from "react-icons/md";
-import { TbSeo } from "react-icons/tb";
-import { FaScrewdriverWrench } from "react-icons/fa6";
+import { TbCreditCard, TbDeviceMobile, TbHeadset, TbSeo, TbTools } from "react-icons/tb";
 import { FeatureItem } from "./FEATURES";
 
 export const HERO_FEATURES: FeatureItem[] = [
   {
     title: "پشتیبانی واقعی ",
-    icon: PiHandshake,
+    icon: TbHeadset ,
   },
   {
     title: "نسخه موبایل ",
-    icon: CiMobile3,
+    icon: TbDeviceMobile ,
   },
   {
     title: "درگاه پرداخت ",
-    icon: MdOutlinePayment,
+    icon: TbCreditCard,
   },
   {
     title: "بدون دانش فنی  ",
-    icon: FaScrewdriverWrench,
+    icon: TbTools ,
   },
   {
     title: "سئو و بهینه سازی ",

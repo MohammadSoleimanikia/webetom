@@ -1,10 +1,12 @@
-import { FeatureItem } from "./FEATURES";
-import { TbClock24 } from "react-icons/tb";
-import { TbWorld } from "react-icons/tb";
-import { TbWallet } from "react-icons/tb";
-import { TbShieldCheck } from "react-icons/tb";
 import { ReactNode } from "react";
+import { IconType } from "react-icons";
+import { TbClock24, TbShieldCheck, TbWallet, TbWorld } from "react-icons/tb";
 
+type OnlineStoreItem = {
+  title: string;
+  imageSrc: string;
+  icon: IconType;
+};
 export type OnlineStoreType = {
   title: string | ReactNode;
   description: string;
@@ -12,7 +14,7 @@ export type OnlineStoreType = {
   imageSrcDesktop: string;
   imageSrcDesktopBg: string;
   link: string;
-  items: FeatureItem[];
+  items: OnlineStoreItem[];
 };
 export const ONLINE_STORE: OnlineStoreType = {
   title: (
@@ -20,19 +22,34 @@ export const ONLINE_STORE: OnlineStoreType = {
       مغازه تو <span className="text-secondary">آنلاین</span> کنیم
     </>
   ),
-  description:
-    "با سایت فروشگاهی آماده سایتوم، محصولاتت رو به هزاران مشتری جدید نمایش بدهه و فروش خودت رو چند برابر کن!",
+  description: "با سایتوم،محصولاتت رو به مشتری نشون بده و فروشتو چند برابر کن!",
   imageSrcMobile: "/images/onlineStore/onlineStoreCharacter.webp",
   imageSrcDesktop: "/images/onlineStore/onlineStoreCharacterDesktop.webp",
-  imageSrcDesktopBg:"/images/onlineStore/onlineStoreCharacterDesktopBg.webp",
+  imageSrcDesktopBg: "/images/onlineStore/onlineStoreCharacterDesktopBg.webp",
   link: "/",
   items: [
-    { title: "اعتماد بیشتر مشتریان", icon: TbShieldCheck },
+    {
+      title: "اعتماد بیشتر مشتریان",
+      icon: TbShieldCheck,
+      imageSrc: "/images/onlineStore/trust.webp",
+    },
 
-    { title: "هزینه کمتر نسبت به فضای فیزیکی", icon: TbWallet },
+    {
+      title: "هزینه کمتر نسبت به فضای فیزیکی",
+      icon: TbWallet,
+      imageSrc: "/images/onlineStore/money.webp",
+    },
 
-    { title: "دسترسی از همه جا", icon: TbWorld },
+    {
+      title: "دسترسی از همه جا",
+      icon: TbWorld,
+      imageSrc: "/images/onlineStore/web.webp",
+    },
 
-    { title: "فروش 24 ساعته", icon: TbClock24 },
+    {
+      title: "فروش 24 ساعته",
+      icon: TbClock24,
+      imageSrc: "/images/onlineStore/24.webp",
+    },
   ],
 };
