@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, FreeMode } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -9,64 +9,87 @@ import "swiper/css/pagination";
 
 import { useMount } from "@/hooks/useMount";
 
-import { Button, Typography } from "@mui/material";
+import { Button } from "@mui/material";
 import NavBtn from "@/components/swiper/NavBtn";
 import VocCard from "./VocCard";
 import { VOICE_OF_CUSTOMERS } from "@/data/VOICE_OF_CUSTOMERS";
 import VocSwiperSkeleton from "./vocSwiperSkeleton";
+import TitleSection from "@/components/titleSection";
+import { routes } from "@/const/links";
+import Link from "next/link";
 
 export default function VoiceOfCustomer() {
   const { isMounted } = useMount();
 
   return (
-    <div className="rounded-2xl py-5">
-      <div className="mb-3 flex flex-col items-center gap-2 sm:relative sm:flex-row sm:justify-center md:mb-5">
-        <Typography variant="h2" className="text-center">
-          صدای مشتریان ما
-        </Typography>
-
-        <div className="w-full text-left sm:absolute sm:left-3 sm:w-auto">
-          <Button variant="text" className="text-sm">
+    <div>
+      <TitleSection
+        title="صدای مشتریان ما"
+        subTitle="نظرات"
+        actionButton={
+          <Link href={routes.comments}>
+          <Button variant="text" className="text-secondary text-sm text-nowrap">
             مشاهده همه نظرات
           </Button>
-        </div>
-      </div>
+          </Link>
+        }
+      />
 
-      <div className="relative flex w-full items-center gap-4">
-        <NavBtn side="previous" />
+      <div className="flex w-full items-center gap-3">
+        <NavBtn side="previous" nextEl="voc-next" previousEl="voc-prev" />
+
         {!isMounted ? (
-          <VocSwiperSkeleton count={VOICE_OF_CUSTOMERS.length}/>
+          <VocSwiperSkeleton count={VOICE_OF_CUSTOMERS.length} />
         ) : (
-          <Swiper
-            modules={[Navigation, Pagination, FreeMode]}
-            freeMode
-            slidesPerView="auto"
-            spaceBetween={24}
-            grabCursor
-            className="px-2 pb-9!"
-            navigation={{
-              nextEl: ".template-next",
-              prevEl: ".template-prev",
-            }}
-            pagination={{
-              clickable: true,
-              type: "bullets",
-              el: ".template-pagination",
-            }}
-          >
-            {VOICE_OF_CUSTOMERS.map((item,index) => (
-              <SwiperSlide
-                key={index}
-                className="h-auto! w-70! py-2 md:w-[320px]!"
-              >
-                {/* customer voice Card */}
-                <VocCard item={item}/>
-              </SwiperSlide>
-            ))}
-            <div className="swiper-pagination template-pagination absolute right-0 bottom-1 left-0 flex justify-center gap-2" />
-          </Swiper>
+          <div className="min-w-0 flex-1">
+            <Swiper
+              modules={[Navigation, Pagination]}
+              grabCursor
+              spaceBetween={16}
+              slidesPerView={1}
+
+              breakpoints={{
+                560: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 24,
+                },
+
+                1280: {
+                  slidesPerView: 4,
+                  spaceBetween: 24,
+                },
+              }}
+
+              navigation={{
+                nextEl: ".voc-next",
+                prevEl: ".voc-prev",
+              }}
+
+              pagination={{
+                clickable: true,
+                type: "bullets",
+                el: ".voc-pagination",
+              }}
+
+              className="w-full px-2 py-3 pb-10!"
+            >
+              {VOICE_OF_CUSTOMERS.map((item, index) => (
+                <SwiperSlide key={index} className="h-auto!">
+                  <VocCard item={item} />
+                </SwiperSlide>
+              ))}
+
+              <div className="swiper-pagination voc-pagination absolute right-0 bottom-1 left-0 flex justify-center gap-2" />
+            </Swiper>
+          </div>
         )}
-        <NavBtn side="next" />
+
+        <NavBtn side="next" nextEl="voc-next" previousEl="voc-prev" />
       </div>
     </div>
   );
