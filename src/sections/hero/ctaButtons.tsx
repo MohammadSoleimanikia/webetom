@@ -1,8 +1,10 @@
-import { IoChevronBack, IoChevronForwardSharp } from "react-icons/io5";
+import { IoChevronBack } from "react-icons/io5";
 import { Button } from "@mui/material";
 import { ComponentProps } from "react";
 import clsx from "clsx";
-import { IoCartOutline } from "react-icons/io5";
+import { TbShoppingCart } from "react-icons/tb";
+import Link from "next/link";
+import { routes } from "@/const/links";
 
 type Props = ComponentProps<"div">;
 
@@ -15,22 +17,26 @@ export default function CtaButtons({ className, ...props }: Props) {
         className,
       )}
     >
+       <Link href={routes.templates} className="w-1/2 min-w-32 sm:w-auto">
       <Button
         endIcon={<IoChevronBack />}
         variant="outlined"
         color="primary"
-        className="min-w-32 bg-white w-1/2 sm:w-auto px-6 py-2.5 text-sm text-nowrap"
+        className="w-1/2 min-w-32 bg-white px-6 py-2.5 text-sm text-nowrap sm:w-auto"
       >
         مشاهده قالب ها
       </Button>
-      <Button
-        endIcon={<IoCartOutline />}
-        variant="contained"
-        color="secondary"
-        className="min-w-32 w-1/2 sm:w-auto px-6 py-2.5 text-sm text-nowrap"
-      >
-        سفارش سایت
-      </Button>
+      </Link>
+      <Link href={routes.order} className="w-1/2 min-w-32 sm:w-auto">
+        <Button
+          endIcon={<TbShoppingCart className="stroke-2" />}
+          variant="contained"
+          color="secondary"
+          className="w-full px-6 py-2.5 text-sm text-nowrap"
+        >
+          سفارش سایت
+        </Button>
+      </Link>
     </div>
   );
 }

@@ -6,7 +6,7 @@ export default function HeroFeatures() {
   return (
     <div
       className={clsx(
-        "h-auto w-full rounded-full bg-white px-4 py-2 shadow-xs",
+        "h-auto w-full rounded-full bg-white p-3 shadow-xs",
         "hidden flex-wrap justify-around gap-2 xl:gap-5 lg:flex",
       )}
     >

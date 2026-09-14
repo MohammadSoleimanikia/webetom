@@ -8,7 +8,7 @@ export default function FeaturesItem({ item }: Props) {
   const Icon = item.icon;
   return (
     <div className="flex flex-col items-center justify-center gap-3">
-      <Icon className="text-primary size-6" />
+      <Icon className="text-primary   size-8" />
       <Typography variant="body1" className="text-center text-nowrap">{item.title}</Typography>
     </div>
   );

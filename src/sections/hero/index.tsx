@@ -63,7 +63,7 @@ export default function HeroSection() {
               )}
             >
               --نصب و راه اندازی در کمتر از
-              <span className="text-secondary"> 24 </span> ساعت--
+              <span className="text-secondary font-semibold"> 24 </span> ساعت--
             </Typography>
           </div>
           {/* CTA buttons */}
