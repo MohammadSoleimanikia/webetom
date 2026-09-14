@@ -34,11 +34,11 @@ export default function BlogPostCard({ item }: Props) {
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
 
-        {/* category */}
+        {/* category tag*/}
         <div
-          className="absolute top-3 right-5 rounded-full px-3 py-1 text-xs font-bold text-white backdrop-blur-sm"
+          className="absolute shadow top-3 right-5 rounded-full px-3 py-1 text-xs font-bold text-white backdrop-blur-sm"
           style={{
-            backgroundColor: `${item.color}dd`,
+            backgroundColor: `${item.color}80`,
           }}
         >
           {item.label}
@@ -48,8 +48,8 @@ export default function BlogPostCard({ item }: Props) {
       {/* content */}
       <div className="flex flex-col gap-3 p-5">
         {/* date */}
-        <Typography className="flex items-center gap-1 text-xs text-slate-400">
-          <LiaCalendarWeekSolid />
+        <Typography className="flex items-center gap-1 text-sm text-slate-400">
+          <LiaCalendarWeekSolid className="size-5"/>
           {dateFormatter(item.date)}
         </Typography>
 
