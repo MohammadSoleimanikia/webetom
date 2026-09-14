@@ -1,68 +1,59 @@
-import { IconType } from "react-icons";
-
-import { RiShoppingBagLine } from "react-icons/ri";
-import { MdOutlineLocalGroceryStore } from "react-icons/md";
-import { IoBrushOutline } from "react-icons/io5";
-import { GiRunningShoe } from "react-icons/gi";
-import { TbPerfume } from "react-icons/tb";
-import { CiMobile3 } from "react-icons/ci";
-
 export type TemplateType = {
   title: string;
   imageSrc: string;
-  icon: IconType;
   color: string;
+  buttonColor: string;
   link: string;
 };
 
 export const TEMPLATES_DATA: TemplateType[] = [
   {
-    title: "سوپر مارکت",
-    imageSrc: "/images/webCard.webp",
+    title: "سوپر مارکت آنلاین",
+    imageSrc: "/images/templates/cart.webp",
     link: "/",
-    color: "#0141C6",
-    icon: MdOutlineLocalGroceryStore,
+    color: "#6FDA40",
+    buttonColor: "#4CAF2E",
   },
   {
-    title: "آرایشی بهداشتی",
-    imageSrc: "/images/webCard.webp",
+    title: "فروشگاه آرایشی ",
+    imageSrc: "/images/templates/makeUp.webp",
     link: "/",
-    color: "#FE720C",
-    icon: IoBrushOutline,
+    color: "#FE7D97",
+    buttonColor: "#E85B78",
   },
   {
-    title: "کیف و کفش",
-    imageSrc: "/images/webCard.webp",
+    title: "فروشگاه کیف و کفش",
+    imageSrc: "/images/templates/shoe.webp",
     link: "/",
-    color: "#722CDB",
-    icon: GiRunningShoe,
+    color: "#E2C5FD",
+    buttonColor: "#9B6FD3",
   },
   {
-    title: "عطر و ادکلن",
-    imageSrc: "/images/webCard.webp",
+    title: "فروشگاه عطر و ادکلن",
+    imageSrc: "/images/templates/perfume.webp",
     link: "/",
-    color: "#039747",
-    icon: TbPerfume,
+    color: "#B97BB6",
+    buttonColor: "#8D568B",
   },
   {
-    title: "موبایل و دیجیتال",
-    imageSrc: "/images/webCard.webp",
+    title: "فروشگاه دیجیتال",
+    imageSrc: "/images/templates/digital.webp",
     link: "/",
-    color: "#2072D9",
-    icon: CiMobile3,
+    color: "#FFB8CB",
+    buttonColor: "#E77D9C",
   },
   {
-    title: "زیبایی و آرایشی",
-    imageSrc: "/images/webCard.webp",
+    title: "فروشگاه پوشاک",
+    imageSrc: "/images/templates/dress.webp",
     link: "/",
-    color: "#F53641",
-    icon: RiShoppingBagLine,
+    color: "#8CB9FF",
+    buttonColor: "#4D86D8",
   },
   {
-    title: "آرایشی",
-    imageSrc: "/images/webCard.webp",
+    title: "سوپرمارکت آنلاین",
+    imageSrc: "/images/templates/food.webp",
     link: "/",
-    color: "#38BDF8",
-    icon: RiShoppingBagLine,
+    color: "#EA5462",
+    buttonColor: "#C83F4C",
   },
 ];

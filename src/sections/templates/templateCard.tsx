@@ -1,49 +1,61 @@
 "use client";
+
 import { TemplateType } from "@/data/TEMPLATED_DATA";
 import { Button, Typography } from "@mui/material";
 import clsx from "clsx";
+
 import Image from "next/image";
 import Link from "next/link";
+
 type Props = {
   item: TemplateType;
 };
 
 export default function TemplateCard({ item }: Props) {
-  const Icon = item.icon;
   return (
-    <div className="shadow-card-small flex min-h-60 w-full flex-col rounded-xl bg-white p-2">
-      {/* image section */}
-      <div className="relative h-40 w-full overflow-hidden rounded-xl">
+    <div
+      className={clsx(
+        "group shadow-card-small flex h-full w-full flex-col rounded-2xl",
+        "bg-white p-2.5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg",
+      )}
+    >
+      <div
+        className="relative flex h-40 w-full items-center justify-center overflow-hidden rounded-xl"
+        style={{
+          backgroundColor: `${item.color}30`,
+        }}
+      >
         <Image
-          fill
-          className="object-cover"
           src={item.imageSrc}
+          width={90}
+          height={90}
           alt={item.title}
+          className="w-15 object-contain transition-all duration-500 group-hover:scale-105 md:w-18"
         />
       </div>
+
       {/* content */}
-      <div className="flex flex-1 flex-col items-center space-y-2 px-1 pt-3">
-        <div className="w-full">
-          <Typography
-            variant="h6"
-            className={clsx(
-              "flex items-center justify-center text-center font-bold",
-              "gap-3",
-            )}
-          >
-            {item.title}
-            <Icon
-              className={`size-6`}
-              style={{
-                color: item.color,
-              }}
-            />
-          </Typography>
-        </div>
+      <div className="flex flex-1 flex-col items-center gap-5 pt-5">
+        <Typography
+          variant="h3"
+          className="text-center text-sm font-bold text-gray-800 md:text-base"
+        >
+          {item.title}
+        </Typography>
+
         <Button
-          LinkComponent={Link}
+          component={Link}
           href={item.link}
-          className="bg-primary-lighter text-primary w-full"
+          fullWidth
+          style={{
+            backgroundColor: item.buttonColor,
+            
+          }}
+          variant="contained"
+          className={clsx(
+            " rounded-xl py-2 text-sm font-semibold",
+            " text-white shadow-none transition-all mt-auto hover:brightness-90",
+          )}
         >
           مشاهده دمو
         </Button>
