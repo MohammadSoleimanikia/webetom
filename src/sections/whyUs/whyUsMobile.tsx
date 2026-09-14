@@ -1,3 +1,5 @@
+import TitleSection from "@/components/titleSection";
+import { padding } from "@/const/LAYOUT";
 import { FeatureItem } from "@/data/FEATURES";
 import { Typography } from "@mui/material";
 import clsx from "clsx";
@@ -7,19 +9,11 @@ type Props = {
 
 export default function WhyUsMobile({ items }: Props) {
   return (
-    <div className="md:hidden">
-      <Typography variant="h2" className="mb-3 text-center">
-        
-        چرا ما را انتخاب کنید؟
-      </Typography>
+    <div className={clsx("md:hidden", padding.section)}>
+      <TitleSection title={"چرا سایتوم رو انتخاب کنید؟"} subTitle="مزیت‌ها" />
 
       {/* items section */}
-      <div
-        className={clsx(
-          "grid w-full grid-cols-2 sm:grid-cols-3 align-middle",
-          "gap-5 sm:grid-cols-3",
-        )}
-      >
+      <div className="flex w-full flex-wrap justify-center gap-5">
         {/* item */}
         {items.map((item, index) => {
           const Icon = item.icon;
@@ -28,19 +22,21 @@ export default function WhyUsMobile({ items }: Props) {
             <div
               key={index}
               className={clsx(
-                "flex w-full flex-col items-center rounded-xl bg-white",
-                "shadow-card-extra-small space-y-1 p-2 text-center",
-                index === items.length - 1 &&
-                  "col-span-2 justify-self-center sm:col-span-1",
+                "shadow-card-extra-small flex w-[calc(50%-10px)] flex-col items-center space-y-1",
+                "rounded-xl bg-white p-2 text-center",
+                "transition-all duration-300 hover:-translate-y-2 sm:w-[calc(33.333%-14px)]",
               )}
             >
-              <Icon className={clsx("size-10  text-primary ")} />
-              <Typography variant="h6" className="font-semibold text-primary-dark">
+              <Icon className={clsx("text-primary size-10")} />
+              <Typography
+                variant="h6"
+                className="text-primary-dark font-semibold"
+              >
                 {item.title}
               </Typography>
               <Typography
                 variant="caption"
-                className="text-sm  font-semibold text-gray-500"
+                className="text-sm font-semibold text-gray-500"
               >
                 {item.description}
               </Typography>
